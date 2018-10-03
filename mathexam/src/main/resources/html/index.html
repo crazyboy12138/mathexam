@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>五年级数学题测试后台</title>
+	<script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
+	<script src="index.js"></script>
+	<style type="text/css">
+		body{
+			background-image: url("sky.jpg");
+			background-repeat: no-repeat; 
+			background-size:100%,100%;
+
+			font-size: 120%;
+		}
+		textarea{
+			width: 300px;
+			height: 100px;
+		}
+		
+	</style>
+</head>
+<body>
+<h2>增加题目</h2>
+<form id="insertForm">
+	所属单元：
+	<input type="radio" name="unit" value="0">找规律</input>
+	<input type="radio" name="unit" value="1">方程</input>
+	<input type="radio" name="unit" value="2">图形</input>
+	<br>
+
+	题目内容：<br>
+	<textarea name="content" form="insertForm" ></textarea> 
+	<br>
+
+	选项：<input type="button" onclick="insert()" value="添加选项"></input>
+	<div id="options">
+		
+	</div>
+
+	
+	正确答案：
+	<div id="answer">
+		
+	</div>
+
+	<input type="submit"></input>
+</form>
+</body>
+</html>
