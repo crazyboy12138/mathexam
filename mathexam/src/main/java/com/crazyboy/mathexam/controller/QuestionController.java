@@ -1,9 +1,11 @@
 package com.crazyboy.mathexam.controller;
 
 import java.util.HashMap;
+import java.util.List;
 import java.util.Map;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
@@ -21,12 +23,13 @@ import com.crazyboy.mathexam.service.impl.QuestionService;
  */
 @RestController
 @RequestMapping("question")
+@CrossOrigin
 public class QuestionController {
 	@Autowired
 	QuestionService questionService;
 	
 	@GetMapping("insert")
-	public void insert(@RequestParam() Map params) {
+	public void insert(@RequestParam() Map<String, Object> params) {
 		Question question = new Question();
 		question.setUnitId(Integer.parseInt(params.get("unit").toString()));
 		question.setContent(params.get("content").toString());
@@ -34,14 +37,22 @@ public class QuestionController {
 		
 		Map<String, String> options = new HashMap();
 		params.keySet().stream().forEach(x -> {
-		    if(x.toString().startsWith("option")) {
-		    	char ch = x.toString().charAt(x.toString().length() - 1);
+		    if(x.startsWith("option")) {
+		    	char ch = x.charAt(x.toString().length() - 1);
 		    	options.put(ch + "", params.get("option" + ch).toString());
 		    }
 		});
 		question.setOptions(JSON.toJSONString(options));
-		
 		questionService.insert(question);
 	}
 	
+	@GetMapping("delete")
+	public void delete(int questionId) {
+		questionService.delete(questionId);
+	}
+	
+	@GetMapping("listQuestionByUnitId")
+	public List<Question> listQuestionByUnitId(int unitId){
+		return questionService.listQuestionByUnitId(unitId);
+	}
 }

@@ -1,5 +1,7 @@
 package com.crazyboy.mathexam.service.impl;
 
+import java.util.List;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -19,5 +21,13 @@ public class QuestionService{
 	
 	public void insert(Question question) {
 		questionMapper.insert(question);
+	}
+	
+	public void delete(int questionId) {
+		questionMapper.deleteByPrimaryKey(questionId);
+	}
+	
+	public List<Question> listQuestionByUnitId(int unitId){
+		return questionMapper.selectByUnitId(unitId);
 	}
 }

@@ -46,4 +46,6 @@ public interface QuestionMapper{
      * @mbggenerated
      */
     int updateByPrimaryKey(Question record);
+    
+    List<Question> selectByUnitId(Integer unitId);
 }

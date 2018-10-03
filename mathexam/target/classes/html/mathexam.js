@@ -10,3 +10,19 @@ function insert(){
 	var str2 = '<input type="radio" name="answer" value="' + ch + '">' + ch + '</input>'
 	answer.append(str2)
 }
+
+function listAllQuestion(){
+	listQuestionsByUnitId(1)
+	listQuestionsByUnitId(2)
+	listQuestionsByUnitId(3)
+}
+
+function listQuestionsByUnitId(unitId){
+	$.ajax({
+		url: "http://localhost:8080/listQuestionByUnitId?unitId=" + unitId,
+		success: function(res){
+			var div = $("#unit" + unitId)
+			div.html("hello" + unitId)
+		}
+	})
+}
