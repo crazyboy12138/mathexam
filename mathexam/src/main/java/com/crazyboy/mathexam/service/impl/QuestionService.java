@@ -1,6 +1,10 @@
 package com.crazyboy.mathexam.service.impl;
 
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+
+import com.crazyboy.mathexam.mybatis.dao.QuestionMapper;
+import com.crazyboy.mathexam.mybatis.model.Question;
 
 /**
  * TODO <BR>
@@ -10,7 +14,10 @@ import org.springframework.stereotype.Service;
  */
 @Service
 public class QuestionService{
-	public void test() {
-		System.out.println("test...");
+	@Autowired
+	QuestionMapper questionMapper;
+	
+	public void insert(Question question) {
+		questionMapper.insert(question);
 	}
 }
