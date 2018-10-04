@@ -1,3 +1,7 @@
+var urlPrefix = 'http://localhost:8003'
+
+
+
 function insert(){
 	console.log("insert")
 	var options = $("#options")
@@ -11,18 +15,41 @@ function insert(){
 	answer.append(str2)
 }
 
+
+function deleteByQuestionId(questionId){
+	$.ajax({
+		url: urlPrefix + "/question/delete?questionId=" + questionId,
+		success: function(){
+			listAllQuestion()
+		}
+	})
+}
+
 function listAllQuestion(){
+	listQuestionsByUnitId(0)
 	listQuestionsByUnitId(1)
 	listQuestionsByUnitId(2)
-	listQuestionsByUnitId(3)
 }
 
 function listQuestionsByUnitId(unitId){
 	$.ajax({
-		url: "http://localhost:8080/listQuestionByUnitId?unitId=" + unitId,
+		url: urlPrefix + "/question/listQuestionByUnitId?unitId=" + unitId,
 		success: function(res){
+			console.log(unitId, res)
 			var div = $("#unit" + unitId)
-			div.html("hello" + unitId)
+			div.html("")
+			for(obj in res){
+				console.log(res[obj].content)
+				div.append('----' + res[obj].content + '&nbsp;&nbsp;<button onclick="deleteByQuestionId(' + 
+					res[obj].questionId + ')"s>删除</button><br>')
+			}
+			
 		}
 	})
+}
+
+function setInputVal(){
+	var t = new Date().getTime()
+	$("#hidden_input1").val(t)
+	$("#hidden_input2").val(t)
 }

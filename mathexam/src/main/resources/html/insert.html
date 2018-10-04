@@ -21,16 +21,20 @@
 </head>
 <body>
 <h2>增加题目</h2>
-<form id="insertForm" action="http://localhost:8080/question/insert">
+<form id="insertForm" target="hidden_frame" action="http://localhost:8003/question/insert">
 	所属单元：
 	<input type="radio" name="unit" value="0">找规律</input>
 	<input type="radio" name="unit" value="1">方程</input>
 	<input type="radio" name="unit" value="2">图形</input>
 	<br>
+	
+	<input id="hidden_input2" name='timestamp' style="display: none" />
 
 	题目内容：<br>
 	<textarea name="content" form="insertForm" ></textarea> 
 	<br>
+
+	
 
 	选项：<input type="button" onclick="insert()" value="添加选项"></input>
 	<div id="options">
@@ -43,8 +47,22 @@
 		
 	</div>
 
-	<input type="submit"></input>
+	<form></form>
+	插入图片（可多选，上传图片后再提交表单）：
+	<form action="http://localhost:8003/question/uploadPic" target="hidden_frame" method="POST" enctype="multipart/form-data" id="picForm">
+	<input type="file" multiple name="pictures"/>
+	<input id="hidden_input1" name='timestamp' style="display: none" />
+	
+	<button type="submit" id="picButton" onclick="setInputVal()">上传</button>
+	</form>
+	<br>
+
+	<button type="submit" id="formButton" form="insertForm">提交</button>
 </form>
+
+
+<iframe name='hidden_frame' id="hidden_frame" style="display:none"></iframe>   
+
 
 </body>
 </html>

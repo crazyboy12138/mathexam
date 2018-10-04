@@ -1,4 +1,6 @@
-var urlPrefix = 'http://localhost:8080'
+var urlPrefix = 'http://localhost:8003'
+
+
 
 function insert(){
 	console.log("insert")
@@ -44,4 +46,10 @@ function listQuestionsByUnitId(unitId){
 			
 		}
 	})
+}
+
+function setInputVal(){
+	var t = new Date().getTime()
+	$("#hidden_input1").val(t)
+	$("#hidden_input2").val(t)
 }
