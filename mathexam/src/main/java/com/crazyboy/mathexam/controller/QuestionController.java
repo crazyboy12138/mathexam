@@ -86,7 +86,7 @@ public class QuestionController {
 				File temp = new File(file, pic.getOriginalFilename());
 				os = new BufferedOutputStream(new FileOutputStream(temp));
 				log.info("图片完整路径：" + temp.getAbsolutePath());
-				urlList.add(temp.getAbsolutePath());
+				urlList.add(Constant.DOMAIN + pic.getOriginalFilename());
 				os.write(pic.getBytes());
 				os.flush();
 			} catch (FileNotFoundException e) {

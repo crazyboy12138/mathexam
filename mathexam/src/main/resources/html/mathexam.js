@@ -1,4 +1,5 @@
-var urlPrefix = 'http://localhost:8003'
+// var urlPrefix = 'http://localhost:8003'
+var urlPrefix = "http://119.29.9.243:8003"
 
 
 

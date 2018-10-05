@@ -2331,3 +2331,345 @@ Caused by: org.apache.ibatis.builder.BuilderException: An invalid property 'jdbc
 	at org.apache.ibatis.builder.xml.XMLMapperBuilder.buildStatementFromContext(XMLMapperBuilder.java:128)
 	at org.apache.ibatis.builder.xml.XMLMapperBuilder.configurationElement(XMLMapperBuilder.java:118)
 	... 76 more
+INFO background-preinit org.hibernate.validator.internal.util.Version - HV000001: Hibernate Validator 6.0.9.Final
+INFO restartedMain com.crazyboy.mathexam.MathexamApplication - Starting MathexamApplication on lintingmin with PID 8276 (D:\eclipse-workspace\mathexam\target\classes started by crazyboy in D:\eclipse-workspace\mathexam)
+INFO restartedMain com.crazyboy.mathexam.MathexamApplication - No active profile set, falling back to default profiles: default
+INFO restartedMain org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext - Refreshing org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@697192be: startup date [Fri Oct 05 10:09:15 CST 2018]; root of context hierarchy
+INFO restartedMain org.springframework.boot.web.embedded.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8003 (http)
+INFO localhost-startStop-1 org.springframework.web.context.ContextLoader - Root WebApplicationContext: initialization completed in 1658 ms
+INFO localhost-startStop-1 org.springframework.boot.web.servlet.ServletRegistrationBean - Servlet dispatcherServlet mapped to [/]
+INFO localhost-startStop-1 org.springframework.boot.web.servlet.FilterRegistrationBean - Mapping filter: 'characterEncodingFilter' to: [/*]
+INFO localhost-startStop-1 org.springframework.boot.web.servlet.FilterRegistrationBean - Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+INFO localhost-startStop-1 org.springframework.boot.web.servlet.FilterRegistrationBean - Mapping filter: 'httpPutFormContentFilter' to: [/*]
+INFO localhost-startStop-1 org.springframework.boot.web.servlet.FilterRegistrationBean - Mapping filter: 'requestContextFilter' to: [/*]
+INFO restartedMain org.springframework.web.servlet.handler.SimpleUrlHandlerMapping - Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+INFO restartedMain org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter - Looking for @ControllerAdvice: org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@697192be: startup date [Fri Oct 05 10:09:15 CST 2018]; root of context hierarchy
+INFO restartedMain org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping - Mapped "{[/question/delete],methods=[GET]}" onto public void com.crazyboy.mathexam.controller.QuestionController.delete(int)
+INFO restartedMain org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping - Mapped "{[/question/insert],methods=[GET]}" onto public void com.crazyboy.mathexam.controller.QuestionController.insert(java.util.Map<java.lang.String, java.lang.Object>) throws java.io.IOException
+INFO restartedMain org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping - Mapped "{[/question/listQuestionByUnitId],methods=[GET]}" onto public java.util.List<com.crazyboy.mathexam.mybatis.model.Question> com.crazyboy.mathexam.controller.QuestionController.listQuestionByUnitId(int)
+INFO restartedMain org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping - Mapped "{[/question/uploadPic],methods=[POST]}" onto public java.lang.String com.crazyboy.mathexam.controller.QuestionController.uploadPic(org.springframework.web.multipart.MultipartFile[],java.lang.String)
+INFO restartedMain org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping - Mapped "{[/unit/updateMaxScore],methods=[GET]}" onto public void com.crazyboy.mathexam.controller.UnitController.updateMaxScore(int,int)
+INFO restartedMain org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping - Mapped "{[/unit/listAll],methods=[GET]}" onto public java.util.List<com.crazyboy.mathexam.mybatis.model.Unit> com.crazyboy.mathexam.controller.UnitController.listAll()
+INFO restartedMain org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping - Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+INFO restartedMain org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping - Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+INFO restartedMain org.springframework.web.servlet.handler.SimpleUrlHandlerMapping - Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+INFO restartedMain org.springframework.web.servlet.handler.SimpleUrlHandlerMapping - Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+INFO restartedMain org.springframework.boot.devtools.autoconfigure.OptionalLiveReloadServer - LiveReload server is running on port 35729
+INFO restartedMain org.springframework.jmx.export.annotation.AnnotationMBeanExporter - Registering beans for JMX exposure on startup
+INFO restartedMain org.springframework.jmx.export.annotation.AnnotationMBeanExporter - Bean with name 'dataSource' has been autodetected for JMX exposure
+INFO restartedMain org.springframework.jmx.export.annotation.AnnotationMBeanExporter - Located MBean 'dataSource': registering with JMX server as MBean [com.alibaba.druid.pool:name=dataSource,type=DruidDataSource]
+INFO restartedMain org.springframework.boot.web.embedded.tomcat.TomcatWebServer - Tomcat started on port(s): 8003 (http) with context path ''
+INFO restartedMain com.crazyboy.mathexam.MathexamApplication - Started MathexamApplication in 3.266 seconds (JVM running for 3.732)
+INFO http-nio-8003-exec-1 org.springframework.web.servlet.DispatcherServlet - FrameworkServlet 'dispatcherServlet': initialization started
+INFO http-nio-8003-exec-1 org.springframework.web.servlet.DispatcherServlet - FrameworkServlet 'dispatcherServlet': initialization completed in 17 ms
+INFO http-nio-8003-exec-1 com.alibaba.druid.pool.DruidDataSource - {dataSource-1} inited
+DEBUG http-nio-8003-exec-1 com.crazyboy.mathexam.mybatis.dao.UnitMapper.updateMaxScore - ==>  Preparing: update unit set max_score=? where id = ? 
+INFO Thread-6 org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext - Closing org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@697192be: startup date [Fri Oct 05 10:09:15 CST 2018]; root of context hierarchy
+INFO Thread-6 org.springframework.jmx.export.annotation.AnnotationMBeanExporter - Unregistering JMX-exposed beans on shutdown
+INFO Thread-6 org.springframework.jmx.export.annotation.AnnotationMBeanExporter - Unregistering JMX-exposed beans
+INFO Thread-6 com.alibaba.druid.pool.DruidDataSource - {dataSource-1} closed
+INFO restartedMain com.crazyboy.mathexam.MathexamApplication - Starting MathexamApplication on lintingmin with PID 8276 (D:\eclipse-workspace\mathexam\target\classes started by crazyboy in D:\eclipse-workspace\mathexam)
+INFO restartedMain com.crazyboy.mathexam.MathexamApplication - No active profile set, falling back to default profiles: default
+INFO restartedMain org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext - Refreshing org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@7dd6f10b: startup date [Fri Oct 05 10:10:32 CST 2018]; root of context hierarchy
+INFO restartedMain org.springframework.boot.web.embedded.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8003 (http)
+INFO localhost-startStop-1 org.springframework.web.context.ContextLoader - Root WebApplicationContext: initialization completed in 381 ms
+INFO localhost-startStop-1 org.springframework.boot.web.servlet.ServletRegistrationBean - Servlet dispatcherServlet mapped to [/]
+INFO localhost-startStop-1 org.springframework.boot.web.servlet.FilterRegistrationBean - Mapping filter: 'characterEncodingFilter' to: [/*]
+INFO localhost-startStop-1 org.springframework.boot.web.servlet.FilterRegistrationBean - Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+INFO localhost-startStop-1 org.springframework.boot.web.servlet.FilterRegistrationBean - Mapping filter: 'httpPutFormContentFilter' to: [/*]
+INFO localhost-startStop-1 org.springframework.boot.web.servlet.FilterRegistrationBean - Mapping filter: 'requestContextFilter' to: [/*]
+INFO restartedMain org.springframework.web.servlet.handler.SimpleUrlHandlerMapping - Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+INFO restartedMain org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter - Looking for @ControllerAdvice: org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@7dd6f10b: startup date [Fri Oct 05 10:10:32 CST 2018]; root of context hierarchy
+INFO restartedMain org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping - Mapped "{[/question/delete],methods=[GET]}" onto public void com.crazyboy.mathexam.controller.QuestionController.delete(int)
+INFO restartedMain org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping - Mapped "{[/question/insert],methods=[GET]}" onto public void com.crazyboy.mathexam.controller.QuestionController.insert(java.util.Map<java.lang.String, java.lang.Object>) throws java.io.IOException
+INFO restartedMain org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping - Mapped "{[/question/listQuestionByUnitId],methods=[GET]}" onto public java.util.List<com.crazyboy.mathexam.mybatis.model.Question> com.crazyboy.mathexam.controller.QuestionController.listQuestionByUnitId(int)
+INFO restartedMain org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping - Mapped "{[/question/uploadPic],methods=[POST]}" onto public java.lang.String com.crazyboy.mathexam.controller.QuestionController.uploadPic(org.springframework.web.multipart.MultipartFile[],java.lang.String)
+INFO restartedMain org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping - Mapped "{[/unit/updateMaxScore],methods=[GET]}" onto public void com.crazyboy.mathexam.controller.UnitController.updateMaxScore(int,int)
+INFO restartedMain org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping - Mapped "{[/unit/listAll],methods=[GET]}" onto public java.util.List<com.crazyboy.mathexam.mybatis.model.Unit> com.crazyboy.mathexam.controller.UnitController.listAll()
+INFO restartedMain org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping - Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+INFO restartedMain org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping - Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+INFO restartedMain org.springframework.web.servlet.handler.SimpleUrlHandlerMapping - Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+INFO restartedMain org.springframework.web.servlet.handler.SimpleUrlHandlerMapping - Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+INFO restartedMain org.springframework.boot.devtools.autoconfigure.OptionalLiveReloadServer - LiveReload server is running on port 35729
+INFO restartedMain org.springframework.jmx.export.annotation.AnnotationMBeanExporter - Registering beans for JMX exposure on startup
+INFO restartedMain org.springframework.jmx.export.annotation.AnnotationMBeanExporter - Bean with name 'dataSource' has been autodetected for JMX exposure
+INFO restartedMain org.springframework.jmx.export.annotation.AnnotationMBeanExporter - Located MBean 'dataSource': registering with JMX server as MBean [com.alibaba.druid.pool:name=dataSource,type=DruidDataSource]
+INFO restartedMain org.springframework.boot.web.embedded.tomcat.TomcatWebServer - Tomcat started on port(s): 8003 (http) with context path ''
+INFO restartedMain com.crazyboy.mathexam.MathexamApplication - Started MathexamApplication in 0.65 seconds (JVM running for 78.522)
+INFO restartedMain org.springframework.boot.devtools.autoconfigure.ConditionEvaluationDeltaLoggingListener - Condition evaluation unchanged
+INFO http-nio-8003-exec-1 org.springframework.web.servlet.DispatcherServlet - FrameworkServlet 'dispatcherServlet': initialization started
+INFO http-nio-8003-exec-1 org.springframework.web.servlet.DispatcherServlet - FrameworkServlet 'dispatcherServlet': initialization completed in 7 ms
+INFO http-nio-8003-exec-1 com.alibaba.druid.pool.DruidDataSource - {dataSource-2} inited
+DEBUG http-nio-8003-exec-1 com.crazyboy.mathexam.mybatis.dao.UnitMapper.updateMaxScore - ==>  Preparing: update unit set max_score=? where id = ? 
+INFO Thread-10 org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext - Closing org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@7dd6f10b: startup date [Fri Oct 05 10:10:32 CST 2018]; root of context hierarchy
+INFO Thread-10 org.springframework.jmx.export.annotation.AnnotationMBeanExporter - Unregistering JMX-exposed beans on shutdown
+INFO Thread-10 org.springframework.jmx.export.annotation.AnnotationMBeanExporter - Unregistering JMX-exposed beans
+INFO Thread-10 com.alibaba.druid.pool.DruidDataSource - {dataSource-2} closed
+INFO restartedMain com.crazyboy.mathexam.MathexamApplication - Starting MathexamApplication on lintingmin with PID 8276 (D:\eclipse-workspace\mathexam\target\classes started by crazyboy in D:\eclipse-workspace\mathexam)
+INFO restartedMain com.crazyboy.mathexam.MathexamApplication - No active profile set, falling back to default profiles: default
+INFO restartedMain org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext - Refreshing org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@6e6fc1d9: startup date [Fri Oct 05 10:12:03 CST 2018]; root of context hierarchy
+INFO restartedMain org.springframework.boot.web.embedded.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8003 (http)
+INFO localhost-startStop-1 org.springframework.web.context.ContextLoader - Root WebApplicationContext: initialization completed in 378 ms
+INFO localhost-startStop-1 org.springframework.boot.web.servlet.ServletRegistrationBean - Servlet dispatcherServlet mapped to [/]
+INFO localhost-startStop-1 org.springframework.boot.web.servlet.FilterRegistrationBean - Mapping filter: 'characterEncodingFilter' to: [/*]
+INFO localhost-startStop-1 org.springframework.boot.web.servlet.FilterRegistrationBean - Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+INFO localhost-startStop-1 org.springframework.boot.web.servlet.FilterRegistrationBean - Mapping filter: 'httpPutFormContentFilter' to: [/*]
+INFO localhost-startStop-1 org.springframework.boot.web.servlet.FilterRegistrationBean - Mapping filter: 'requestContextFilter' to: [/*]
+INFO restartedMain org.springframework.web.servlet.handler.SimpleUrlHandlerMapping - Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+INFO restartedMain org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter - Looking for @ControllerAdvice: org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@6e6fc1d9: startup date [Fri Oct 05 10:12:03 CST 2018]; root of context hierarchy
+INFO restartedMain org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping - Mapped "{[/question/delete],methods=[GET]}" onto public void com.crazyboy.mathexam.controller.QuestionController.delete(int)
+INFO restartedMain org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping - Mapped "{[/question/insert],methods=[GET]}" onto public void com.crazyboy.mathexam.controller.QuestionController.insert(java.util.Map<java.lang.String, java.lang.Object>) throws java.io.IOException
+INFO restartedMain org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping - Mapped "{[/question/listQuestionByUnitId],methods=[GET]}" onto public java.util.List<com.crazyboy.mathexam.mybatis.model.Question> com.crazyboy.mathexam.controller.QuestionController.listQuestionByUnitId(int)
+INFO restartedMain org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping - Mapped "{[/question/uploadPic],methods=[POST]}" onto public java.lang.String com.crazyboy.mathexam.controller.QuestionController.uploadPic(org.springframework.web.multipart.MultipartFile[],java.lang.String)
+INFO restartedMain org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping - Mapped "{[/unit/updateMaxScore],methods=[GET]}" onto public void com.crazyboy.mathexam.controller.UnitController.updateMaxScore(int,int)
+INFO restartedMain org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping - Mapped "{[/unit/listAll],methods=[GET]}" onto public java.util.List<com.crazyboy.mathexam.mybatis.model.Unit> com.crazyboy.mathexam.controller.UnitController.listAll()
+INFO restartedMain org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping - Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+INFO restartedMain org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping - Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+INFO restartedMain org.springframework.web.servlet.handler.SimpleUrlHandlerMapping - Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+INFO restartedMain org.springframework.web.servlet.handler.SimpleUrlHandlerMapping - Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+INFO restartedMain org.springframework.boot.devtools.autoconfigure.OptionalLiveReloadServer - LiveReload server is running on port 35729
+INFO restartedMain org.springframework.jmx.export.annotation.AnnotationMBeanExporter - Registering beans for JMX exposure on startup
+INFO restartedMain org.springframework.jmx.export.annotation.AnnotationMBeanExporter - Bean with name 'dataSource' has been autodetected for JMX exposure
+INFO restartedMain org.springframework.jmx.export.annotation.AnnotationMBeanExporter - Located MBean 'dataSource': registering with JMX server as MBean [com.alibaba.druid.pool:name=dataSource,type=DruidDataSource]
+INFO restartedMain org.springframework.boot.web.embedded.tomcat.TomcatWebServer - Tomcat started on port(s): 8003 (http) with context path ''
+INFO restartedMain com.crazyboy.mathexam.MathexamApplication - Started MathexamApplication in 0.645 seconds (JVM running for 169.589)
+INFO restartedMain org.springframework.boot.devtools.autoconfigure.ConditionEvaluationDeltaLoggingListener - Condition evaluation unchanged
+INFO Thread-16 org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext - Closing org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@6e6fc1d9: startup date [Fri Oct 05 10:12:03 CST 2018]; root of context hierarchy
+INFO Thread-16 org.springframework.jmx.export.annotation.AnnotationMBeanExporter - Unregistering JMX-exposed beans on shutdown
+INFO Thread-16 org.springframework.jmx.export.annotation.AnnotationMBeanExporter - Unregistering JMX-exposed beans
+INFO restartedMain com.crazyboy.mathexam.MathexamApplication - Starting MathexamApplication on lintingmin with PID 8276 (D:\eclipse-workspace\mathexam\target\classes started by crazyboy in D:\eclipse-workspace\mathexam)
+INFO restartedMain com.crazyboy.mathexam.MathexamApplication - No active profile set, falling back to default profiles: default
+INFO restartedMain org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext - Refreshing org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@4a233dec: startup date [Fri Oct 05 10:12:33 CST 2018]; root of context hierarchy
+INFO restartedMain org.springframework.boot.web.embedded.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8003 (http)
+INFO localhost-startStop-1 org.springframework.web.context.ContextLoader - Root WebApplicationContext: initialization completed in 342 ms
+INFO localhost-startStop-1 org.springframework.boot.web.servlet.ServletRegistrationBean - Servlet dispatcherServlet mapped to [/]
+INFO localhost-startStop-1 org.springframework.boot.web.servlet.FilterRegistrationBean - Mapping filter: 'characterEncodingFilter' to: [/*]
+INFO localhost-startStop-1 org.springframework.boot.web.servlet.FilterRegistrationBean - Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+INFO localhost-startStop-1 org.springframework.boot.web.servlet.FilterRegistrationBean - Mapping filter: 'httpPutFormContentFilter' to: [/*]
+INFO localhost-startStop-1 org.springframework.boot.web.servlet.FilterRegistrationBean - Mapping filter: 'requestContextFilter' to: [/*]
+INFO restartedMain org.springframework.web.servlet.handler.SimpleUrlHandlerMapping - Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+INFO restartedMain org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter - Looking for @ControllerAdvice: org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@4a233dec: startup date [Fri Oct 05 10:12:33 CST 2018]; root of context hierarchy
+INFO restartedMain org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping - Mapped "{[/question/delete],methods=[GET]}" onto public void com.crazyboy.mathexam.controller.QuestionController.delete(int)
+INFO restartedMain org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping - Mapped "{[/question/insert],methods=[GET]}" onto public void com.crazyboy.mathexam.controller.QuestionController.insert(java.util.Map<java.lang.String, java.lang.Object>) throws java.io.IOException
+INFO restartedMain org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping - Mapped "{[/question/listQuestionByUnitId],methods=[GET]}" onto public java.util.List<com.crazyboy.mathexam.mybatis.model.Question> com.crazyboy.mathexam.controller.QuestionController.listQuestionByUnitId(int)
+INFO restartedMain org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping - Mapped "{[/question/uploadPic],methods=[POST]}" onto public java.lang.String com.crazyboy.mathexam.controller.QuestionController.uploadPic(org.springframework.web.multipart.MultipartFile[],java.lang.String)
+INFO restartedMain org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping - Mapped "{[/unit/updateMaxScore],methods=[GET]}" onto public void com.crazyboy.mathexam.controller.UnitController.updateMaxScore(int,int)
+INFO restartedMain org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping - Mapped "{[/unit/listAll],methods=[GET]}" onto public java.util.List<com.crazyboy.mathexam.mybatis.model.Unit> com.crazyboy.mathexam.controller.UnitController.listAll()
+INFO restartedMain org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping - Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+INFO restartedMain org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping - Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+INFO restartedMain org.springframework.web.servlet.handler.SimpleUrlHandlerMapping - Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+INFO restartedMain org.springframework.web.servlet.handler.SimpleUrlHandlerMapping - Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+INFO restartedMain org.springframework.boot.devtools.autoconfigure.OptionalLiveReloadServer - LiveReload server is running on port 35729
+INFO restartedMain org.springframework.jmx.export.annotation.AnnotationMBeanExporter - Registering beans for JMX exposure on startup
+INFO restartedMain org.springframework.jmx.export.annotation.AnnotationMBeanExporter - Bean with name 'dataSource' has been autodetected for JMX exposure
+INFO restartedMain org.springframework.jmx.export.annotation.AnnotationMBeanExporter - Located MBean 'dataSource': registering with JMX server as MBean [com.alibaba.druid.pool:name=dataSource,type=DruidDataSource]
+INFO restartedMain org.springframework.boot.web.embedded.tomcat.TomcatWebServer - Tomcat started on port(s): 8003 (http) with context path ''
+INFO restartedMain com.crazyboy.mathexam.MathexamApplication - Started MathexamApplication in 0.576 seconds (JVM running for 199.492)
+INFO restartedMain org.springframework.boot.devtools.autoconfigure.ConditionEvaluationDeltaLoggingListener - Condition evaluation unchanged
+INFO http-nio-8003-exec-2 org.springframework.web.servlet.DispatcherServlet - FrameworkServlet 'dispatcherServlet': initialization started
+INFO http-nio-8003-exec-2 org.springframework.web.servlet.DispatcherServlet - FrameworkServlet 'dispatcherServlet': initialization completed in 2 ms
+INFO http-nio-8003-exec-2 com.alibaba.druid.pool.DruidDataSource - {dataSource-3} inited
+DEBUG http-nio-8003-exec-2 com.crazyboy.mathexam.mybatis.dao.UnitMapper.updateMaxScore - ==>  Preparing: update unit set max_score=? where id = ? 
+DEBUG http-nio-8003-exec-2 com.crazyboy.mathexam.mybatis.dao.UnitMapper.updateMaxScore - ==> Parameters: 99(Integer), 1(Integer)
+DEBUG http-nio-8003-exec-2 com.crazyboy.mathexam.mybatis.dao.UnitMapper.updateMaxScore - <==    Updates: 1
+DEBUG http-nio-8003-exec-5 com.crazyboy.mathexam.mybatis.dao.UnitMapper.selectAll - ==>  Preparing: select id, theme, percent, max_score from unit 
+DEBUG http-nio-8003-exec-5 com.crazyboy.mathexam.mybatis.dao.UnitMapper.selectAll - ==> Parameters: 
+TRACE http-nio-8003-exec-5 com.crazyboy.mathexam.mybatis.dao.UnitMapper.selectAll - <==    Columns: id, theme, percent, max_score
+TRACE http-nio-8003-exec-5 com.crazyboy.mathexam.mybatis.dao.UnitMapper.selectAll - <==        Row: 0, 找规律, 0.3, 12
+TRACE http-nio-8003-exec-5 com.crazyboy.mathexam.mybatis.dao.UnitMapper.selectAll - <==        Row: 1, 列方程, 0.4, 99
+TRACE http-nio-8003-exec-5 com.crazyboy.mathexam.mybatis.dao.UnitMapper.selectAll - <==        Row: 2, 图形, 0.4, 0
+DEBUG http-nio-8003-exec-5 com.crazyboy.mathexam.mybatis.dao.UnitMapper.selectAll - <==      Total: 3
+DEBUG http-nio-8003-exec-6 com.crazyboy.mathexam.mybatis.dao.QuestionMapper.selectByUnitId - ==>  Preparing: select question_id, unit_id, answer, content, options, urls from question where unit_id = ? 
+DEBUG http-nio-8003-exec-6 com.crazyboy.mathexam.mybatis.dao.QuestionMapper.selectByUnitId - ==> Parameters: 0(Integer)
+TRACE http-nio-8003-exec-6 com.crazyboy.mathexam.mybatis.dao.QuestionMapper.selectByUnitId - <==    Columns: question_id, unit_id, answer, content, options, urls
+TRACE http-nio-8003-exec-6 com.crazyboy.mathexam.mybatis.dao.QuestionMapper.selectByUnitId - <==        Row: 7, 0, B, <<BLOB>>, <<BLOB>>, <<BLOB>>
+TRACE http-nio-8003-exec-6 com.crazyboy.mathexam.mybatis.dao.QuestionMapper.selectByUnitId - <==        Row: 9, 0, C, <<BLOB>>, <<BLOB>>, <<BLOB>>
+TRACE http-nio-8003-exec-6 com.crazyboy.mathexam.mybatis.dao.QuestionMapper.selectByUnitId - <==        Row: 10, 0, A, <<BLOB>>, <<BLOB>>, <<BLOB>>
+TRACE http-nio-8003-exec-6 com.crazyboy.mathexam.mybatis.dao.QuestionMapper.selectByUnitId - <==        Row: 11, 0, A, <<BLOB>>, <<BLOB>>, <<BLOB>>
+TRACE http-nio-8003-exec-6 com.crazyboy.mathexam.mybatis.dao.QuestionMapper.selectByUnitId - <==        Row: 12, 0, A, <<BLOB>>, <<BLOB>>, <<BLOB>>
+TRACE http-nio-8003-exec-6 com.crazyboy.mathexam.mybatis.dao.QuestionMapper.selectByUnitId - <==        Row: 13, 0, A, <<BLOB>>, <<BLOB>>, <<BLOB>>
+TRACE http-nio-8003-exec-6 com.crazyboy.mathexam.mybatis.dao.QuestionMapper.selectByUnitId - <==        Row: 15, 0, B, <<BLOB>>, <<BLOB>>, <<BLOB>>
+TRACE http-nio-8003-exec-6 com.crazyboy.mathexam.mybatis.dao.QuestionMapper.selectByUnitId - <==        Row: 16, 0, A, <<BLOB>>, <<BLOB>>, <<BLOB>>
+DEBUG http-nio-8003-exec-6 com.crazyboy.mathexam.mybatis.dao.QuestionMapper.selectByUnitId - <==      Total: 8
+DEBUG http-nio-8003-exec-7 com.crazyboy.mathexam.mybatis.dao.QuestionMapper.selectByUnitId - ==>  Preparing: select question_id, unit_id, answer, content, options, urls from question where unit_id = ? 
+DEBUG http-nio-8003-exec-7 com.crazyboy.mathexam.mybatis.dao.QuestionMapper.selectByUnitId - ==> Parameters: 1(Integer)
+TRACE http-nio-8003-exec-7 com.crazyboy.mathexam.mybatis.dao.QuestionMapper.selectByUnitId - <==    Columns: question_id, unit_id, answer, content, options, urls
+TRACE http-nio-8003-exec-7 com.crazyboy.mathexam.mybatis.dao.QuestionMapper.selectByUnitId - <==        Row: 17, 1, A, <<BLOB>>, <<BLOB>>, <<BLOB>>
+TRACE http-nio-8003-exec-7 com.crazyboy.mathexam.mybatis.dao.QuestionMapper.selectByUnitId - <==        Row: 18, 1, B, <<BLOB>>, <<BLOB>>, <<BLOB>>
+TRACE http-nio-8003-exec-7 com.crazyboy.mathexam.mybatis.dao.QuestionMapper.selectByUnitId - <==        Row: 19, 1, C, <<BLOB>>, <<BLOB>>, <<BLOB>>
+TRACE http-nio-8003-exec-7 com.crazyboy.mathexam.mybatis.dao.QuestionMapper.selectByUnitId - <==        Row: 20, 1, D, <<BLOB>>, <<BLOB>>, <<BLOB>>
+DEBUG http-nio-8003-exec-7 com.crazyboy.mathexam.mybatis.dao.QuestionMapper.selectByUnitId - <==      Total: 4
+DEBUG http-nio-8003-exec-8 com.crazyboy.mathexam.mybatis.dao.QuestionMapper.selectByUnitId - ==>  Preparing: select question_id, unit_id, answer, content, options, urls from question where unit_id = ? 
+DEBUG http-nio-8003-exec-8 com.crazyboy.mathexam.mybatis.dao.QuestionMapper.selectByUnitId - ==> Parameters: 2(Integer)
+TRACE http-nio-8003-exec-8 com.crazyboy.mathexam.mybatis.dao.QuestionMapper.selectByUnitId - <==    Columns: question_id, unit_id, answer, content, options, urls
+TRACE http-nio-8003-exec-8 com.crazyboy.mathexam.mybatis.dao.QuestionMapper.selectByUnitId - <==        Row: 3, 2, A, <<BLOB>>, <<BLOB>>, <<BLOB>>
+TRACE http-nio-8003-exec-8 com.crazyboy.mathexam.mybatis.dao.QuestionMapper.selectByUnitId - <==        Row: 14, 2, A, <<BLOB>>, <<BLOB>>, <<BLOB>>
+DEBUG http-nio-8003-exec-8 com.crazyboy.mathexam.mybatis.dao.QuestionMapper.selectByUnitId - <==      Total: 2
+DEBUG http-nio-8003-exec-9 com.crazyboy.mathexam.mybatis.dao.UnitMapper.selectAll - ==>  Preparing: select id, theme, percent, max_score from unit 
+DEBUG http-nio-8003-exec-9 com.crazyboy.mathexam.mybatis.dao.UnitMapper.selectAll - ==> Parameters: 
+DEBUG http-nio-8003-exec-10 com.crazyboy.mathexam.mybatis.dao.QuestionMapper.selectByUnitId - ==>  Preparing: select question_id, unit_id, answer, content, options, urls from question where unit_id = ? 
+DEBUG http-nio-8003-exec-10 com.crazyboy.mathexam.mybatis.dao.QuestionMapper.selectByUnitId - ==> Parameters: 0(Integer)
+TRACE http-nio-8003-exec-9 com.crazyboy.mathexam.mybatis.dao.UnitMapper.selectAll - <==    Columns: id, theme, percent, max_score
+TRACE http-nio-8003-exec-10 com.crazyboy.mathexam.mybatis.dao.QuestionMapper.selectByUnitId - <==    Columns: question_id, unit_id, answer, content, options, urls
+TRACE http-nio-8003-exec-9 com.crazyboy.mathexam.mybatis.dao.UnitMapper.selectAll - <==        Row: 0, 找规律, 0.3, 12
+TRACE http-nio-8003-exec-10 com.crazyboy.mathexam.mybatis.dao.QuestionMapper.selectByUnitId - <==        Row: 7, 0, B, <<BLOB>>, <<BLOB>>, <<BLOB>>
+TRACE http-nio-8003-exec-9 com.crazyboy.mathexam.mybatis.dao.UnitMapper.selectAll - <==        Row: 1, 列方程, 0.4, 99
+TRACE http-nio-8003-exec-10 com.crazyboy.mathexam.mybatis.dao.QuestionMapper.selectByUnitId - <==        Row: 9, 0, C, <<BLOB>>, <<BLOB>>, <<BLOB>>
+TRACE http-nio-8003-exec-9 com.crazyboy.mathexam.mybatis.dao.UnitMapper.selectAll - <==        Row: 2, 图形, 0.4, 0
+DEBUG http-nio-8003-exec-9 com.crazyboy.mathexam.mybatis.dao.UnitMapper.selectAll - <==      Total: 3
+DEBUG http-nio-8003-exec-2 com.crazyboy.mathexam.mybatis.dao.QuestionMapper.selectByUnitId - ==>  Preparing: select question_id, unit_id, answer, content, options, urls from question where unit_id = ? 
+DEBUG http-nio-8003-exec-2 com.crazyboy.mathexam.mybatis.dao.QuestionMapper.selectByUnitId - ==> Parameters: 1(Integer)
+TRACE http-nio-8003-exec-10 com.crazyboy.mathexam.mybatis.dao.QuestionMapper.selectByUnitId - <==        Row: 10, 0, A, <<BLOB>>, <<BLOB>>, <<BLOB>>
+TRACE http-nio-8003-exec-10 com.crazyboy.mathexam.mybatis.dao.QuestionMapper.selectByUnitId - <==        Row: 11, 0, A, <<BLOB>>, <<BLOB>>, <<BLOB>>
+TRACE http-nio-8003-exec-10 com.crazyboy.mathexam.mybatis.dao.QuestionMapper.selectByUnitId - <==        Row: 12, 0, A, <<BLOB>>, <<BLOB>>, <<BLOB>>
+TRACE http-nio-8003-exec-10 com.crazyboy.mathexam.mybatis.dao.QuestionMapper.selectByUnitId - <==        Row: 13, 0, A, <<BLOB>>, <<BLOB>>, <<BLOB>>
+TRACE http-nio-8003-exec-10 com.crazyboy.mathexam.mybatis.dao.QuestionMapper.selectByUnitId - <==        Row: 15, 0, B, <<BLOB>>, <<BLOB>>, <<BLOB>>
+TRACE http-nio-8003-exec-10 com.crazyboy.mathexam.mybatis.dao.QuestionMapper.selectByUnitId - <==        Row: 16, 0, A, <<BLOB>>, <<BLOB>>, <<BLOB>>
+DEBUG http-nio-8003-exec-10 com.crazyboy.mathexam.mybatis.dao.QuestionMapper.selectByUnitId - <==      Total: 8
+DEBUG http-nio-8003-exec-1 com.crazyboy.mathexam.mybatis.dao.QuestionMapper.selectByUnitId - ==>  Preparing: select question_id, unit_id, answer, content, options, urls from question where unit_id = ? 
+DEBUG http-nio-8003-exec-1 com.crazyboy.mathexam.mybatis.dao.QuestionMapper.selectByUnitId - ==> Parameters: 2(Integer)
+TRACE http-nio-8003-exec-1 com.crazyboy.mathexam.mybatis.dao.QuestionMapper.selectByUnitId - <==    Columns: question_id, unit_id, answer, content, options, urls
+TRACE http-nio-8003-exec-1 com.crazyboy.mathexam.mybatis.dao.QuestionMapper.selectByUnitId - <==        Row: 3, 2, A, <<BLOB>>, <<BLOB>>, <<BLOB>>
+TRACE http-nio-8003-exec-2 com.crazyboy.mathexam.mybatis.dao.QuestionMapper.selectByUnitId - <==    Columns: question_id, unit_id, answer, content, options, urls
+TRACE http-nio-8003-exec-2 com.crazyboy.mathexam.mybatis.dao.QuestionMapper.selectByUnitId - <==        Row: 17, 1, A, <<BLOB>>, <<BLOB>>, <<BLOB>>
+TRACE http-nio-8003-exec-1 com.crazyboy.mathexam.mybatis.dao.QuestionMapper.selectByUnitId - <==        Row: 14, 2, A, <<BLOB>>, <<BLOB>>, <<BLOB>>
+DEBUG http-nio-8003-exec-1 com.crazyboy.mathexam.mybatis.dao.QuestionMapper.selectByUnitId - <==      Total: 2
+TRACE http-nio-8003-exec-2 com.crazyboy.mathexam.mybatis.dao.QuestionMapper.selectByUnitId - <==        Row: 18, 1, B, <<BLOB>>, <<BLOB>>, <<BLOB>>
+TRACE http-nio-8003-exec-2 com.crazyboy.mathexam.mybatis.dao.QuestionMapper.selectByUnitId - <==        Row: 19, 1, C, <<BLOB>>, <<BLOB>>, <<BLOB>>
+TRACE http-nio-8003-exec-2 com.crazyboy.mathexam.mybatis.dao.QuestionMapper.selectByUnitId - <==        Row: 20, 1, D, <<BLOB>>, <<BLOB>>, <<BLOB>>
+DEBUG http-nio-8003-exec-2 com.crazyboy.mathexam.mybatis.dao.QuestionMapper.selectByUnitId - <==      Total: 4
+DEBUG http-nio-8003-exec-3 com.crazyboy.mathexam.mybatis.dao.UnitMapper.selectAll - ==>  Preparing: select id, theme, percent, max_score from unit 
+DEBUG http-nio-8003-exec-3 com.crazyboy.mathexam.mybatis.dao.UnitMapper.selectAll - ==> Parameters: 
+DEBUG http-nio-8003-exec-4 com.crazyboy.mathexam.mybatis.dao.QuestionMapper.selectByUnitId - ==>  Preparing: select question_id, unit_id, answer, content, options, urls from question where unit_id = ? 
+DEBUG http-nio-8003-exec-4 com.crazyboy.mathexam.mybatis.dao.QuestionMapper.selectByUnitId - ==> Parameters: 0(Integer)
+DEBUG http-nio-8003-exec-5 com.crazyboy.mathexam.mybatis.dao.QuestionMapper.selectByUnitId - ==>  Preparing: select question_id, unit_id, answer, content, options, urls from question where unit_id = ? 
+DEBUG http-nio-8003-exec-5 com.crazyboy.mathexam.mybatis.dao.QuestionMapper.selectByUnitId - ==> Parameters: 1(Integer)
+TRACE http-nio-8003-exec-3 com.crazyboy.mathexam.mybatis.dao.UnitMapper.selectAll - <==    Columns: id, theme, percent, max_score
+TRACE http-nio-8003-exec-5 com.crazyboy.mathexam.mybatis.dao.QuestionMapper.selectByUnitId - <==    Columns: question_id, unit_id, answer, content, options, urls
+TRACE http-nio-8003-exec-3 com.crazyboy.mathexam.mybatis.dao.UnitMapper.selectAll - <==        Row: 0, 找规律, 0.3, 12
+TRACE http-nio-8003-exec-5 com.crazyboy.mathexam.mybatis.dao.QuestionMapper.selectByUnitId - <==        Row: 17, 1, A, <<BLOB>>, <<BLOB>>, <<BLOB>>
+TRACE http-nio-8003-exec-3 com.crazyboy.mathexam.mybatis.dao.UnitMapper.selectAll - <==        Row: 1, 列方程, 0.4, 10
+TRACE http-nio-8003-exec-5 com.crazyboy.mathexam.mybatis.dao.QuestionMapper.selectByUnitId - <==        Row: 18, 1, B, <<BLOB>>, <<BLOB>>, <<BLOB>>
+TRACE http-nio-8003-exec-3 com.crazyboy.mathexam.mybatis.dao.UnitMapper.selectAll - <==        Row: 2, 图形, 0.4, 0
+TRACE http-nio-8003-exec-5 com.crazyboy.mathexam.mybatis.dao.QuestionMapper.selectByUnitId - <==        Row: 19, 1, C, <<BLOB>>, <<BLOB>>, <<BLOB>>
+DEBUG http-nio-8003-exec-3 com.crazyboy.mathexam.mybatis.dao.UnitMapper.selectAll - <==      Total: 3
+TRACE http-nio-8003-exec-5 com.crazyboy.mathexam.mybatis.dao.QuestionMapper.selectByUnitId - <==        Row: 20, 1, D, <<BLOB>>, <<BLOB>>, <<BLOB>>
+DEBUG http-nio-8003-exec-5 com.crazyboy.mathexam.mybatis.dao.QuestionMapper.selectByUnitId - <==      Total: 4
+DEBUG http-nio-8003-exec-6 com.crazyboy.mathexam.mybatis.dao.QuestionMapper.selectByUnitId - ==>  Preparing: select question_id, unit_id, answer, content, options, urls from question where unit_id = ? 
+DEBUG http-nio-8003-exec-6 com.crazyboy.mathexam.mybatis.dao.QuestionMapper.selectByUnitId - ==> Parameters: 2(Integer)
+TRACE http-nio-8003-exec-4 com.crazyboy.mathexam.mybatis.dao.QuestionMapper.selectByUnitId - <==    Columns: question_id, unit_id, answer, content, options, urls
+TRACE http-nio-8003-exec-4 com.crazyboy.mathexam.mybatis.dao.QuestionMapper.selectByUnitId - <==        Row: 7, 0, B, <<BLOB>>, <<BLOB>>, <<BLOB>>
+TRACE http-nio-8003-exec-4 com.crazyboy.mathexam.mybatis.dao.QuestionMapper.selectByUnitId - <==        Row: 9, 0, C, <<BLOB>>, <<BLOB>>, <<BLOB>>
+TRACE http-nio-8003-exec-4 com.crazyboy.mathexam.mybatis.dao.QuestionMapper.selectByUnitId - <==        Row: 10, 0, A, <<BLOB>>, <<BLOB>>, <<BLOB>>
+TRACE http-nio-8003-exec-4 com.crazyboy.mathexam.mybatis.dao.QuestionMapper.selectByUnitId - <==        Row: 11, 0, A, <<BLOB>>, <<BLOB>>, <<BLOB>>
+TRACE http-nio-8003-exec-4 com.crazyboy.mathexam.mybatis.dao.QuestionMapper.selectByUnitId - <==        Row: 12, 0, A, <<BLOB>>, <<BLOB>>, <<BLOB>>
+TRACE http-nio-8003-exec-4 com.crazyboy.mathexam.mybatis.dao.QuestionMapper.selectByUnitId - <==        Row: 13, 0, A, <<BLOB>>, <<BLOB>>, <<BLOB>>
+TRACE http-nio-8003-exec-4 com.crazyboy.mathexam.mybatis.dao.QuestionMapper.selectByUnitId - <==        Row: 15, 0, B, <<BLOB>>, <<BLOB>>, <<BLOB>>
+TRACE http-nio-8003-exec-4 com.crazyboy.mathexam.mybatis.dao.QuestionMapper.selectByUnitId - <==        Row: 16, 0, A, <<BLOB>>, <<BLOB>>, <<BLOB>>
+DEBUG http-nio-8003-exec-4 com.crazyboy.mathexam.mybatis.dao.QuestionMapper.selectByUnitId - <==      Total: 8
+TRACE http-nio-8003-exec-6 com.crazyboy.mathexam.mybatis.dao.QuestionMapper.selectByUnitId - <==    Columns: question_id, unit_id, answer, content, options, urls
+TRACE http-nio-8003-exec-6 com.crazyboy.mathexam.mybatis.dao.QuestionMapper.selectByUnitId - <==        Row: 3, 2, A, <<BLOB>>, <<BLOB>>, <<BLOB>>
+TRACE http-nio-8003-exec-6 com.crazyboy.mathexam.mybatis.dao.QuestionMapper.selectByUnitId - <==        Row: 14, 2, A, <<BLOB>>, <<BLOB>>, <<BLOB>>
+DEBUG http-nio-8003-exec-6 com.crazyboy.mathexam.mybatis.dao.QuestionMapper.selectByUnitId - <==      Total: 2
+DEBUG http-nio-8003-exec-7 com.crazyboy.mathexam.mybatis.dao.UnitMapper.selectAll - ==>  Preparing: select id, theme, percent, max_score from unit 
+DEBUG http-nio-8003-exec-7 com.crazyboy.mathexam.mybatis.dao.UnitMapper.selectAll - ==> Parameters: 
+DEBUG http-nio-8003-exec-8 com.crazyboy.mathexam.mybatis.dao.QuestionMapper.selectByUnitId - ==>  Preparing: select question_id, unit_id, answer, content, options, urls from question where unit_id = ? 
+DEBUG http-nio-8003-exec-8 com.crazyboy.mathexam.mybatis.dao.QuestionMapper.selectByUnitId - ==> Parameters: 0(Integer)
+DEBUG http-nio-8003-exec-9 com.crazyboy.mathexam.mybatis.dao.QuestionMapper.selectByUnitId - ==>  Preparing: select question_id, unit_id, answer, content, options, urls from question where unit_id = ? 
+DEBUG http-nio-8003-exec-9 com.crazyboy.mathexam.mybatis.dao.QuestionMapper.selectByUnitId - ==> Parameters: 1(Integer)
+DEBUG http-nio-8003-exec-10 com.crazyboy.mathexam.mybatis.dao.QuestionMapper.selectByUnitId - ==>  Preparing: select question_id, unit_id, answer, content, options, urls from question where unit_id = ? 
+DEBUG http-nio-8003-exec-10 com.crazyboy.mathexam.mybatis.dao.QuestionMapper.selectByUnitId - ==> Parameters: 2(Integer)
+TRACE http-nio-8003-exec-10 com.crazyboy.mathexam.mybatis.dao.QuestionMapper.selectByUnitId - <==    Columns: question_id, unit_id, answer, content, options, urls
+TRACE http-nio-8003-exec-10 com.crazyboy.mathexam.mybatis.dao.QuestionMapper.selectByUnitId - <==        Row: 3, 2, A, <<BLOB>>, <<BLOB>>, <<BLOB>>
+TRACE http-nio-8003-exec-10 com.crazyboy.mathexam.mybatis.dao.QuestionMapper.selectByUnitId - <==        Row: 14, 2, A, <<BLOB>>, <<BLOB>>, <<BLOB>>
+DEBUG http-nio-8003-exec-10 com.crazyboy.mathexam.mybatis.dao.QuestionMapper.selectByUnitId - <==      Total: 2
+TRACE http-nio-8003-exec-7 com.crazyboy.mathexam.mybatis.dao.UnitMapper.selectAll - <==    Columns: id, theme, percent, max_score
+TRACE http-nio-8003-exec-8 com.crazyboy.mathexam.mybatis.dao.QuestionMapper.selectByUnitId - <==    Columns: question_id, unit_id, answer, content, options, urls
+TRACE http-nio-8003-exec-7 com.crazyboy.mathexam.mybatis.dao.UnitMapper.selectAll - <==        Row: 0, 找规律, 0.3, 12
+TRACE http-nio-8003-exec-8 com.crazyboy.mathexam.mybatis.dao.QuestionMapper.selectByUnitId - <==        Row: 7, 0, B, <<BLOB>>, <<BLOB>>, <<BLOB>>
+TRACE http-nio-8003-exec-9 com.crazyboy.mathexam.mybatis.dao.QuestionMapper.selectByUnitId - <==    Columns: question_id, unit_id, answer, content, options, urls
+TRACE http-nio-8003-exec-9 com.crazyboy.mathexam.mybatis.dao.QuestionMapper.selectByUnitId - <==        Row: 17, 1, A, <<BLOB>>, <<BLOB>>, <<BLOB>>
+TRACE http-nio-8003-exec-7 com.crazyboy.mathexam.mybatis.dao.UnitMapper.selectAll - <==        Row: 1, 列方程, 0.4, 10
+TRACE http-nio-8003-exec-7 com.crazyboy.mathexam.mybatis.dao.UnitMapper.selectAll - <==        Row: 2, 图形, 0.4, 0
+TRACE http-nio-8003-exec-8 com.crazyboy.mathexam.mybatis.dao.QuestionMapper.selectByUnitId - <==        Row: 9, 0, C, <<BLOB>>, <<BLOB>>, <<BLOB>>
+DEBUG http-nio-8003-exec-7 com.crazyboy.mathexam.mybatis.dao.UnitMapper.selectAll - <==      Total: 3
+TRACE http-nio-8003-exec-9 com.crazyboy.mathexam.mybatis.dao.QuestionMapper.selectByUnitId - <==        Row: 18, 1, B, <<BLOB>>, <<BLOB>>, <<BLOB>>
+TRACE http-nio-8003-exec-8 com.crazyboy.mathexam.mybatis.dao.QuestionMapper.selectByUnitId - <==        Row: 10, 0, A, <<BLOB>>, <<BLOB>>, <<BLOB>>
+TRACE http-nio-8003-exec-9 com.crazyboy.mathexam.mybatis.dao.QuestionMapper.selectByUnitId - <==        Row: 19, 1, C, <<BLOB>>, <<BLOB>>, <<BLOB>>
+TRACE http-nio-8003-exec-8 com.crazyboy.mathexam.mybatis.dao.QuestionMapper.selectByUnitId - <==        Row: 11, 0, A, <<BLOB>>, <<BLOB>>, <<BLOB>>
+TRACE http-nio-8003-exec-9 com.crazyboy.mathexam.mybatis.dao.QuestionMapper.selectByUnitId - <==        Row: 20, 1, D, <<BLOB>>, <<BLOB>>, <<BLOB>>
+TRACE http-nio-8003-exec-8 com.crazyboy.mathexam.mybatis.dao.QuestionMapper.selectByUnitId - <==        Row: 12, 0, A, <<BLOB>>, <<BLOB>>, <<BLOB>>
+DEBUG http-nio-8003-exec-9 com.crazyboy.mathexam.mybatis.dao.QuestionMapper.selectByUnitId - <==      Total: 4
+TRACE http-nio-8003-exec-8 com.crazyboy.mathexam.mybatis.dao.QuestionMapper.selectByUnitId - <==        Row: 13, 0, A, <<BLOB>>, <<BLOB>>, <<BLOB>>
+TRACE http-nio-8003-exec-8 com.crazyboy.mathexam.mybatis.dao.QuestionMapper.selectByUnitId - <==        Row: 15, 0, B, <<BLOB>>, <<BLOB>>, <<BLOB>>
+TRACE http-nio-8003-exec-8 com.crazyboy.mathexam.mybatis.dao.QuestionMapper.selectByUnitId - <==        Row: 16, 0, A, <<BLOB>>, <<BLOB>>, <<BLOB>>
+DEBUG http-nio-8003-exec-8 com.crazyboy.mathexam.mybatis.dao.QuestionMapper.selectByUnitId - <==      Total: 8
+DEBUG http-nio-8003-exec-1 com.crazyboy.mathexam.mybatis.dao.UnitMapper.selectAll - ==>  Preparing: select id, theme, percent, max_score from unit 
+DEBUG http-nio-8003-exec-1 com.crazyboy.mathexam.mybatis.dao.UnitMapper.selectAll - ==> Parameters: 
+DEBUG http-nio-8003-exec-2 com.crazyboy.mathexam.mybatis.dao.QuestionMapper.selectByUnitId - ==>  Preparing: select question_id, unit_id, answer, content, options, urls from question where unit_id = ? 
+DEBUG http-nio-8003-exec-2 com.crazyboy.mathexam.mybatis.dao.QuestionMapper.selectByUnitId - ==> Parameters: 0(Integer)
+DEBUG http-nio-8003-exec-3 com.crazyboy.mathexam.mybatis.dao.QuestionMapper.selectByUnitId - ==>  Preparing: select question_id, unit_id, answer, content, options, urls from question where unit_id = ? 
+DEBUG http-nio-8003-exec-3 com.crazyboy.mathexam.mybatis.dao.QuestionMapper.selectByUnitId - ==> Parameters: 1(Integer)
+DEBUG http-nio-8003-exec-5 com.crazyboy.mathexam.mybatis.dao.QuestionMapper.selectByUnitId - ==>  Preparing: select question_id, unit_id, answer, content, options, urls from question where unit_id = ? 
+DEBUG http-nio-8003-exec-5 com.crazyboy.mathexam.mybatis.dao.QuestionMapper.selectByUnitId - ==> Parameters: 2(Integer)
+TRACE http-nio-8003-exec-5 com.crazyboy.mathexam.mybatis.dao.QuestionMapper.selectByUnitId - <==    Columns: question_id, unit_id, answer, content, options, urls
+TRACE http-nio-8003-exec-5 com.crazyboy.mathexam.mybatis.dao.QuestionMapper.selectByUnitId - <==        Row: 3, 2, A, <<BLOB>>, <<BLOB>>, <<BLOB>>
+TRACE http-nio-8003-exec-5 com.crazyboy.mathexam.mybatis.dao.QuestionMapper.selectByUnitId - <==        Row: 14, 2, A, <<BLOB>>, <<BLOB>>, <<BLOB>>
+DEBUG http-nio-8003-exec-5 com.crazyboy.mathexam.mybatis.dao.QuestionMapper.selectByUnitId - <==      Total: 2
+TRACE http-nio-8003-exec-1 com.crazyboy.mathexam.mybatis.dao.UnitMapper.selectAll - <==    Columns: id, theme, percent, max_score
+TRACE http-nio-8003-exec-2 com.crazyboy.mathexam.mybatis.dao.QuestionMapper.selectByUnitId - <==    Columns: question_id, unit_id, answer, content, options, urls
+TRACE http-nio-8003-exec-1 com.crazyboy.mathexam.mybatis.dao.UnitMapper.selectAll - <==        Row: 0, 找规律, 0.3, 12
+TRACE http-nio-8003-exec-2 com.crazyboy.mathexam.mybatis.dao.QuestionMapper.selectByUnitId - <==        Row: 7, 0, B, <<BLOB>>, <<BLOB>>, <<BLOB>>
+TRACE http-nio-8003-exec-1 com.crazyboy.mathexam.mybatis.dao.UnitMapper.selectAll - <==        Row: 1, 列方程, 0.4, 10
+TRACE http-nio-8003-exec-2 com.crazyboy.mathexam.mybatis.dao.QuestionMapper.selectByUnitId - <==        Row: 9, 0, C, <<BLOB>>, <<BLOB>>, <<BLOB>>
+TRACE http-nio-8003-exec-1 com.crazyboy.mathexam.mybatis.dao.UnitMapper.selectAll - <==        Row: 2, 图形, 0.4, 0
+TRACE http-nio-8003-exec-2 com.crazyboy.mathexam.mybatis.dao.QuestionMapper.selectByUnitId - <==        Row: 10, 0, A, <<BLOB>>, <<BLOB>>, <<BLOB>>
+DEBUG http-nio-8003-exec-1 com.crazyboy.mathexam.mybatis.dao.UnitMapper.selectAll - <==      Total: 3
+TRACE http-nio-8003-exec-2 com.crazyboy.mathexam.mybatis.dao.QuestionMapper.selectByUnitId - <==        Row: 11, 0, A, <<BLOB>>, <<BLOB>>, <<BLOB>>
+TRACE http-nio-8003-exec-2 com.crazyboy.mathexam.mybatis.dao.QuestionMapper.selectByUnitId - <==        Row: 12, 0, A, <<BLOB>>, <<BLOB>>, <<BLOB>>
+TRACE http-nio-8003-exec-2 com.crazyboy.mathexam.mybatis.dao.QuestionMapper.selectByUnitId - <==        Row: 13, 0, A, <<BLOB>>, <<BLOB>>, <<BLOB>>
+TRACE http-nio-8003-exec-2 com.crazyboy.mathexam.mybatis.dao.QuestionMapper.selectByUnitId - <==        Row: 15, 0, B, <<BLOB>>, <<BLOB>>, <<BLOB>>
+TRACE http-nio-8003-exec-2 com.crazyboy.mathexam.mybatis.dao.QuestionMapper.selectByUnitId - <==        Row: 16, 0, A, <<BLOB>>, <<BLOB>>, <<BLOB>>
+DEBUG http-nio-8003-exec-2 com.crazyboy.mathexam.mybatis.dao.QuestionMapper.selectByUnitId - <==      Total: 8
+TRACE http-nio-8003-exec-3 com.crazyboy.mathexam.mybatis.dao.QuestionMapper.selectByUnitId - <==    Columns: question_id, unit_id, answer, content, options, urls
+TRACE http-nio-8003-exec-3 com.crazyboy.mathexam.mybatis.dao.QuestionMapper.selectByUnitId - <==        Row: 17, 1, A, <<BLOB>>, <<BLOB>>, <<BLOB>>
+TRACE http-nio-8003-exec-3 com.crazyboy.mathexam.mybatis.dao.QuestionMapper.selectByUnitId - <==        Row: 18, 1, B, <<BLOB>>, <<BLOB>>, <<BLOB>>
+TRACE http-nio-8003-exec-3 com.crazyboy.mathexam.mybatis.dao.QuestionMapper.selectByUnitId - <==        Row: 19, 1, C, <<BLOB>>, <<BLOB>>, <<BLOB>>
+TRACE http-nio-8003-exec-3 com.crazyboy.mathexam.mybatis.dao.QuestionMapper.selectByUnitId - <==        Row: 20, 1, D, <<BLOB>>, <<BLOB>>, <<BLOB>>
+DEBUG http-nio-8003-exec-3 com.crazyboy.mathexam.mybatis.dao.QuestionMapper.selectByUnitId - <==      Total: 4
+DEBUG http-nio-8003-exec-4 com.crazyboy.mathexam.mybatis.dao.UnitMapper.updateMaxScore - ==>  Preparing: update unit set max_score=? where id = ? 
+DEBUG http-nio-8003-exec-4 com.crazyboy.mathexam.mybatis.dao.UnitMapper.updateMaxScore - ==> Parameters: 75(Integer), 1(Integer)
+DEBUG http-nio-8003-exec-4 com.crazyboy.mathexam.mybatis.dao.UnitMapper.updateMaxScore - <==    Updates: 1
+DEBUG http-nio-8003-exec-8 com.crazyboy.mathexam.mybatis.dao.UnitMapper.selectAll - ==>  Preparing: select id, theme, percent, max_score from unit 
+DEBUG http-nio-8003-exec-2 com.crazyboy.mathexam.mybatis.dao.QuestionMapper.selectByUnitId - ==>  Preparing: select question_id, unit_id, answer, content, options, urls from question where unit_id = ? 
+DEBUG http-nio-8003-exec-8 com.crazyboy.mathexam.mybatis.dao.UnitMapper.selectAll - ==> Parameters: 
+DEBUG http-nio-8003-exec-2 com.crazyboy.mathexam.mybatis.dao.QuestionMapper.selectByUnitId - ==> Parameters: 2(Integer)
+DEBUG http-nio-8003-exec-1 com.crazyboy.mathexam.mybatis.dao.QuestionMapper.selectByUnitId - ==>  Preparing: select question_id, unit_id, answer, content, options, urls from question where unit_id = ? 
+DEBUG http-nio-8003-exec-5 com.crazyboy.mathexam.mybatis.dao.QuestionMapper.selectByUnitId - ==>  Preparing: select question_id, unit_id, answer, content, options, urls from question where unit_id = ? 
+DEBUG http-nio-8003-exec-5 com.crazyboy.mathexam.mybatis.dao.QuestionMapper.selectByUnitId - ==> Parameters: 0(Integer)
+DEBUG http-nio-8003-exec-1 com.crazyboy.mathexam.mybatis.dao.QuestionMapper.selectByUnitId - ==> Parameters: 1(Integer)
+TRACE http-nio-8003-exec-1 com.crazyboy.mathexam.mybatis.dao.QuestionMapper.selectByUnitId - <==    Columns: question_id, unit_id, answer, content, options, urls
+TRACE http-nio-8003-exec-2 com.crazyboy.mathexam.mybatis.dao.QuestionMapper.selectByUnitId - <==    Columns: question_id, unit_id, answer, content, options, urls
+TRACE http-nio-8003-exec-1 com.crazyboy.mathexam.mybatis.dao.QuestionMapper.selectByUnitId - <==        Row: 17, 1, A, <<BLOB>>, <<BLOB>>, <<BLOB>>
+TRACE http-nio-8003-exec-8 com.crazyboy.mathexam.mybatis.dao.UnitMapper.selectAll - <==    Columns: id, theme, percent, max_score
+TRACE http-nio-8003-exec-2 com.crazyboy.mathexam.mybatis.dao.QuestionMapper.selectByUnitId - <==        Row: 3, 2, A, <<BLOB>>, <<BLOB>>, <<BLOB>>
+TRACE http-nio-8003-exec-8 com.crazyboy.mathexam.mybatis.dao.UnitMapper.selectAll - <==        Row: 0, 找规律, 0.3, 12
+TRACE http-nio-8003-exec-5 com.crazyboy.mathexam.mybatis.dao.QuestionMapper.selectByUnitId - <==    Columns: question_id, unit_id, answer, content, options, urls
+TRACE http-nio-8003-exec-2 com.crazyboy.mathexam.mybatis.dao.QuestionMapper.selectByUnitId - <==        Row: 14, 2, A, <<BLOB>>, <<BLOB>>, <<BLOB>>
+TRACE http-nio-8003-exec-5 com.crazyboy.mathexam.mybatis.dao.QuestionMapper.selectByUnitId - <==        Row: 7, 0, B, <<BLOB>>, <<BLOB>>, <<BLOB>>
+DEBUG http-nio-8003-exec-2 com.crazyboy.mathexam.mybatis.dao.QuestionMapper.selectByUnitId - <==      Total: 2
+TRACE http-nio-8003-exec-1 com.crazyboy.mathexam.mybatis.dao.QuestionMapper.selectByUnitId - <==        Row: 18, 1, B, <<BLOB>>, <<BLOB>>, <<BLOB>>
+TRACE http-nio-8003-exec-5 com.crazyboy.mathexam.mybatis.dao.QuestionMapper.selectByUnitId - <==        Row: 9, 0, C, <<BLOB>>, <<BLOB>>, <<BLOB>>
+TRACE http-nio-8003-exec-1 com.crazyboy.mathexam.mybatis.dao.QuestionMapper.selectByUnitId - <==        Row: 19, 1, C, <<BLOB>>, <<BLOB>>, <<BLOB>>
+TRACE http-nio-8003-exec-1 com.crazyboy.mathexam.mybatis.dao.QuestionMapper.selectByUnitId - <==        Row: 20, 1, D, <<BLOB>>, <<BLOB>>, <<BLOB>>
+TRACE http-nio-8003-exec-5 com.crazyboy.mathexam.mybatis.dao.QuestionMapper.selectByUnitId - <==        Row: 10, 0, A, <<BLOB>>, <<BLOB>>, <<BLOB>>
+DEBUG http-nio-8003-exec-1 com.crazyboy.mathexam.mybatis.dao.QuestionMapper.selectByUnitId - <==      Total: 4
+TRACE http-nio-8003-exec-5 com.crazyboy.mathexam.mybatis.dao.QuestionMapper.selectByUnitId - <==        Row: 11, 0, A, <<BLOB>>, <<BLOB>>, <<BLOB>>
+TRACE http-nio-8003-exec-5 com.crazyboy.mathexam.mybatis.dao.QuestionMapper.selectByUnitId - <==        Row: 12, 0, A, <<BLOB>>, <<BLOB>>, <<BLOB>>
+TRACE http-nio-8003-exec-5 com.crazyboy.mathexam.mybatis.dao.QuestionMapper.selectByUnitId - <==        Row: 13, 0, A, <<BLOB>>, <<BLOB>>, <<BLOB>>
+TRACE http-nio-8003-exec-5 com.crazyboy.mathexam.mybatis.dao.QuestionMapper.selectByUnitId - <==        Row: 15, 0, B, <<BLOB>>, <<BLOB>>, <<BLOB>>
+TRACE http-nio-8003-exec-5 com.crazyboy.mathexam.mybatis.dao.QuestionMapper.selectByUnitId - <==        Row: 16, 0, A, <<BLOB>>, <<BLOB>>, <<BLOB>>
+DEBUG http-nio-8003-exec-5 com.crazyboy.mathexam.mybatis.dao.QuestionMapper.selectByUnitId - <==      Total: 8
+TRACE http-nio-8003-exec-8 com.crazyboy.mathexam.mybatis.dao.UnitMapper.selectAll - <==        Row: 1, 列方程, 0.4, 75
+TRACE http-nio-8003-exec-8 com.crazyboy.mathexam.mybatis.dao.UnitMapper.selectAll - <==        Row: 2, 图形, 0.4, 0
+DEBUG http-nio-8003-exec-8 com.crazyboy.mathexam.mybatis.dao.UnitMapper.selectAll - <==      Total: 3
