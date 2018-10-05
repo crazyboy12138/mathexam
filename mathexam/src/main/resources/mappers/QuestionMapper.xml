@@ -58,6 +58,6 @@
 	</select>
 	
 	<select id="selectByUnitId" parameterType="java.lang.Integer" resultMap="BaseResultMap">
-		select question_id, answer, content, options from question where unit_id = #{unitId, jdbcType=INTEGER}
+		select question_id, unit_id, answer, content, options, urls from question where unit_id = #{unitId, jdbcType=INTEGER}
 	</select>
 </mapper>

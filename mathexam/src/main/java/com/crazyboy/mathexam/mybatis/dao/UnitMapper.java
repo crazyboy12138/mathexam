@@ -3,6 +3,7 @@ package com.crazyboy.mathexam.mybatis.dao;
 import java.util.List;
 
 import org.apache.ibatis.annotations.Mapper;
+import org.apache.ibatis.annotations.Param;
 
 import com.crazyboy.mathexam.mybatis.model.Unit;
 @Mapper
@@ -46,4 +47,6 @@ public interface UnitMapper {
      * @mbggenerated
      */
     int updateByPrimaryKey(Unit record);
+    
+    void updateMaxScore(@Param("maxScore")int maxScore, @Param("id")int id);
 }

@@ -60,4 +60,9 @@
     select id, theme, percent, max_score
     from unit
   </select>
+  <update id="updateMaxScore">
+  	update unit 
+  	set max_score=#{maxScore,jdbcType=INTEGER}
+  	where id = #{id, jdbcType=INTEGER}
+  </update>
 </mapper>

@@ -1,5 +1,7 @@
 package com.crazyboy.mathexam.controller;
 
+import java.util.List;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -19,9 +21,14 @@ public class UnitController {
 	@Autowired
 	UnitService unitService;
 	
-	@GetMapping("insert")
-	public String insert(Unit unit) {
-		unitService.insert(unit);
-		return "ok";
+	@GetMapping("listAll")
+	public List<Unit> listAll() {
+		return unitService.selectAll();
+	}
+	
+	@GetMapping("updateMaxScore")
+	public void updateMaxScore(int maxScore, int unitId) {
+		System.out.println(maxScore + ", " + unitId);
+		unitService.updateMaxScore(maxScore, unitId);
 	}
 }
