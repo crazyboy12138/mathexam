@@ -60,4 +60,16 @@
 	<select id="selectByUnitId" parameterType="java.lang.Integer" resultMap="BaseResultMap">
 		select question_id, unit_id, answer, content, options, urls from question where unit_id = #{unitId, jdbcType=INTEGER}
 	</select>
+	
+	<select id="selectOptionsByPrimaryKey" resultType="String">
+		select options from question where question_id = #{questionId}
+	</select>
+	
+	<update id="modifyContentByPrimaryKey">
+		update question set content = #{content} where question_id = #{questionId}
+	</update>
+	
+	<update id="modifyOptionsByPrimaryKey">
+		update question set options = #{options} where question_id = #{questionId}
+	</update>
 </mapper>

@@ -1,22 +1,32 @@
-INFO restartedMain org.springframework.jmx.export.annotation.AnnotationMBeanExporter - Unregistering JMX-exposed beans on shutdown
-INFO restartedMain org.springframework.jmx.export.annotation.AnnotationMBeanExporter - Unregistering JMX-exposed beans
-INFO background-preinit org.hibernate.validator.internal.util.Version - HV000001: Hibernate Validator 6.0.9.Final
-INFO restartedMain com.crazyboy.mathexam.MathexamApplication - Starting MathexamApplication on lintingmin with PID 19820 (D:\eclipse-workspace\mathexam\target\classes started by crazyboy in D:\eclipse-workspace\mathexam)
+DEBUG http-nio-8003-exec-1 com.crazyboy.mathexam.mybatis.dao.QuestionMapper.selectOptionsByPrimaryKey - ==> Parameters: 25(Integer)
+TRACE http-nio-8003-exec-1 com.crazyboy.mathexam.mybatis.dao.QuestionMapper.selectOptionsByPrimaryKey - <==    Columns: options
+TRACE http-nio-8003-exec-1 com.crazyboy.mathexam.mybatis.dao.QuestionMapper.selectOptionsByPrimaryKey - <==        Row: <<BLOB>>
+DEBUG http-nio-8003-exec-1 com.crazyboy.mathexam.mybatis.dao.QuestionMapper.selectOptionsByPrimaryKey - <==      Total: 1
+DEBUG http-nio-8003-exec-1 com.crazyboy.mathexam.mybatis.dao.QuestionMapper.modifyOptionsByPrimaryKey - ==>  Preparing: update question set options = ? where question_id = ? 
+DEBUG http-nio-8003-exec-1 com.crazyboy.mathexam.mybatis.dao.QuestionMapper.modifyOptionsByPrimaryKey - ==> Parameters: {"A":"1110","B":"10","68":"24","C":"12","D":"20","E":"25","F":"36"}(String), 25(Integer)
+DEBUG http-nio-8003-exec-1 com.crazyboy.mathexam.mybatis.dao.QuestionMapper.modifyOptionsByPrimaryKey - <==    Updates: 1
+INFO Thread-142 org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext - Closing org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@2a826da7: startup date [Mon Oct 08 15:38:56 CST 2018]; root of context hierarchy
+INFO Thread-142 org.springframework.jmx.export.annotation.AnnotationMBeanExporter - Unregistering JMX-exposed beans on shutdown
+INFO Thread-142 org.springframework.jmx.export.annotation.AnnotationMBeanExporter - Unregistering JMX-exposed beans
+INFO Thread-142 com.alibaba.druid.pool.DruidDataSource - {dataSource-10} closed
+INFO restartedMain com.crazyboy.mathexam.MathexamApplication - Starting MathexamApplication on lintingmin with PID 11564 (D:\eclipse-workspace\mathexam\target\classes started by crazyboy in D:\eclipse-workspace\mathexam)
 INFO restartedMain com.crazyboy.mathexam.MathexamApplication - No active profile set, falling back to default profiles: default
-INFO restartedMain org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext - Refreshing org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@73dfb2f2: startup date [Sat Oct 06 16:58:56 CST 2018]; root of context hierarchy
-INFO restartedMain org.springframework.boot.web.embedded.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8003 (https)
-INFO localhost-startStop-1 org.springframework.web.context.ContextLoader - Root WebApplicationContext: initialization completed in 1751 ms
+INFO restartedMain org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext - Refreshing org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@6fff3dba: startup date [Mon Oct 08 15:40:01 CST 2018]; root of context hierarchy
+INFO restartedMain org.springframework.boot.web.embedded.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8003 (http)
+INFO localhost-startStop-1 org.springframework.web.context.ContextLoader - Root WebApplicationContext: initialization completed in 218 ms
 INFO localhost-startStop-1 org.springframework.boot.web.servlet.ServletRegistrationBean - Servlet dispatcherServlet mapped to [/]
 INFO localhost-startStop-1 org.springframework.boot.web.servlet.FilterRegistrationBean - Mapping filter: 'characterEncodingFilter' to: [/*]
 INFO localhost-startStop-1 org.springframework.boot.web.servlet.FilterRegistrationBean - Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
 INFO localhost-startStop-1 org.springframework.boot.web.servlet.FilterRegistrationBean - Mapping filter: 'httpPutFormContentFilter' to: [/*]
 INFO localhost-startStop-1 org.springframework.boot.web.servlet.FilterRegistrationBean - Mapping filter: 'requestContextFilter' to: [/*]
 INFO restartedMain org.springframework.web.servlet.handler.SimpleUrlHandlerMapping - Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
-INFO restartedMain org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter - Looking for @ControllerAdvice: org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@73dfb2f2: startup date [Sat Oct 06 16:58:56 CST 2018]; root of context hierarchy
+INFO restartedMain org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter - Looking for @ControllerAdvice: org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@6fff3dba: startup date [Mon Oct 08 15:40:01 CST 2018]; root of context hierarchy
 INFO restartedMain org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping - Mapped "{[/question/delete],methods=[GET]}" onto public void com.crazyboy.mathexam.controller.QuestionController.delete(int)
 INFO restartedMain org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping - Mapped "{[/question/insert],methods=[GET]}" onto public void com.crazyboy.mathexam.controller.QuestionController.insert(java.util.Map<java.lang.String, java.lang.Object>) throws java.io.IOException
 INFO restartedMain org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping - Mapped "{[/question/listQuestionByUnitId],methods=[GET]}" onto public java.util.List<com.crazyboy.mathexam.mybatis.model.Question> com.crazyboy.mathexam.controller.QuestionController.listQuestionByUnitId(int)
+INFO restartedMain org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping - Mapped "{[/question/modifyOptions],methods=[GET]}" onto public void com.crazyboy.mathexam.controller.QuestionController.modifyOptions(int,int,java.lang.String)
 INFO restartedMain org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping - Mapped "{[/question/uploadPic],methods=[POST]}" onto public java.lang.String com.crazyboy.mathexam.controller.QuestionController.uploadPic(org.springframework.web.multipart.MultipartFile[],java.lang.String)
+INFO restartedMain org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping - Mapped "{[/question/modifyContentByQuestionId],methods=[GET]}" onto public void com.crazyboy.mathexam.controller.QuestionController.modifyContentByQuestionId(int,java.lang.String)
 INFO restartedMain org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping - Mapped "{[/unit/listAll],methods=[GET]}" onto public java.util.List<com.crazyboy.mathexam.mybatis.model.Unit> com.crazyboy.mathexam.controller.UnitController.listAll()
 INFO restartedMain org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping - Mapped "{[/unit/updateMaxScore],methods=[GET]}" onto public void com.crazyboy.mathexam.controller.UnitController.updateMaxScore(int,int)
 INFO restartedMain org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping - Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
@@ -27,70 +37,74 @@ INFO restartedMain org.springframework.boot.devtools.autoconfigure.OptionalLiveR
 INFO restartedMain org.springframework.jmx.export.annotation.AnnotationMBeanExporter - Registering beans for JMX exposure on startup
 INFO restartedMain org.springframework.jmx.export.annotation.AnnotationMBeanExporter - Bean with name 'dataSource' has been autodetected for JMX exposure
 INFO restartedMain org.springframework.jmx.export.annotation.AnnotationMBeanExporter - Located MBean 'dataSource': registering with JMX server as MBean [com.alibaba.druid.pool:name=dataSource,type=DruidDataSource]
-INFO restartedMain org.springframework.boot.web.embedded.tomcat.TomcatWebServer - Tomcat started on port(s): 8003 (https) with context path ''
-INFO restartedMain com.crazyboy.mathexam.MathexamApplication - Started MathexamApplication in 3.77 seconds (JVM running for 4.234)
-INFO https-jsse-nio-8003-exec-4 org.springframework.web.servlet.DispatcherServlet - FrameworkServlet 'dispatcherServlet': initialization started
-INFO https-jsse-nio-8003-exec-4 org.springframework.web.servlet.DispatcherServlet - FrameworkServlet 'dispatcherServlet': initialization completed in 18 ms
-INFO https-jsse-nio-8003-exec-4 com.alibaba.druid.pool.DruidDataSource - {dataSource-1} inited
-DEBUG https-jsse-nio-8003-exec-4 com.crazyboy.mathexam.mybatis.dao.UnitMapper.selectAll - ==>  Preparing: select id, theme, percent, max_score from unit 
-DEBUG https-jsse-nio-8003-exec-4 com.crazyboy.mathexam.mybatis.dao.UnitMapper.selectAll - ==> Parameters: 
-TRACE https-jsse-nio-8003-exec-4 com.crazyboy.mathexam.mybatis.dao.UnitMapper.selectAll - <==    Columns: id, theme, percent, max_score
-TRACE https-jsse-nio-8003-exec-4 com.crazyboy.mathexam.mybatis.dao.UnitMapper.selectAll - <==        Row: 0, 找规律, 0.3, 50
-TRACE https-jsse-nio-8003-exec-4 com.crazyboy.mathexam.mybatis.dao.UnitMapper.selectAll - <==        Row: 1, 列方程, 0.4, 75
-TRACE https-jsse-nio-8003-exec-4 com.crazyboy.mathexam.mybatis.dao.UnitMapper.selectAll - <==        Row: 2, 图形, 0.4, 100
-DEBUG https-jsse-nio-8003-exec-4 com.crazyboy.mathexam.mybatis.dao.UnitMapper.selectAll - <==      Total: 3
-INFO Thread-6 org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext - Closing org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@73dfb2f2: startup date [Sat Oct 06 16:58:56 CST 2018]; root of context hierarchy
-INFO Thread-6 org.springframework.jmx.export.annotation.AnnotationMBeanExporter - Unregistering JMX-exposed beans on shutdown
-INFO Thread-6 org.springframework.jmx.export.annotation.AnnotationMBeanExporter - Unregistering JMX-exposed beans
-INFO Thread-6 com.alibaba.druid.pool.DruidDataSource - {dataSource-1} closed
-INFO restartedMain com.crazyboy.mathexam.MathexamApplication - Starting MathexamApplication on lintingmin with PID 19820 (D:\eclipse-workspace\mathexam\target\classes started by crazyboy in D:\eclipse-workspace\mathexam)
-INFO restartedMain com.crazyboy.mathexam.MathexamApplication - No active profile set, falling back to default profiles: default
-INFO restartedMain org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext - Refreshing org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@4326f1ba: startup date [Sat Oct 06 17:00:08 CST 2018]; root of context hierarchy
-INFO restartedMain org.springframework.boot.web.embedded.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8003 (https)
-INFO localhost-startStop-1 org.springframework.web.context.ContextLoader - Root WebApplicationContext: initialization completed in 605 ms
-INFO localhost-startStop-1 org.springframework.boot.web.servlet.ServletRegistrationBean - Servlet dispatcherServlet mapped to [/]
-INFO localhost-startStop-1 org.springframework.boot.web.servlet.FilterRegistrationBean - Mapping filter: 'characterEncodingFilter' to: [/*]
-INFO localhost-startStop-1 org.springframework.boot.web.servlet.FilterRegistrationBean - Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
-INFO localhost-startStop-1 org.springframework.boot.web.servlet.FilterRegistrationBean - Mapping filter: 'httpPutFormContentFilter' to: [/*]
-INFO localhost-startStop-1 org.springframework.boot.web.servlet.FilterRegistrationBean - Mapping filter: 'requestContextFilter' to: [/*]
-INFO restartedMain org.springframework.web.servlet.handler.SimpleUrlHandlerMapping - Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
-INFO restartedMain org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter - Looking for @ControllerAdvice: org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@4326f1ba: startup date [Sat Oct 06 17:00:08 CST 2018]; root of context hierarchy
-INFO restartedMain org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping - Mapped "{[/question/delete],methods=[GET]}" onto public void com.crazyboy.mathexam.controller.QuestionController.delete(int)
-INFO restartedMain org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping - Mapped "{[/question/insert],methods=[GET]}" onto public void com.crazyboy.mathexam.controller.QuestionController.insert(java.util.Map<java.lang.String, java.lang.Object>) throws java.io.IOException
-INFO restartedMain org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping - Mapped "{[/question/listQuestionByUnitId],methods=[GET]}" onto public java.util.List<com.crazyboy.mathexam.mybatis.model.Question> com.crazyboy.mathexam.controller.QuestionController.listQuestionByUnitId(int)
-INFO restartedMain org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping - Mapped "{[/question/uploadPic],methods=[POST]}" onto public java.lang.String com.crazyboy.mathexam.controller.QuestionController.uploadPic(org.springframework.web.multipart.MultipartFile[],java.lang.String)
-INFO restartedMain org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping - Mapped "{[/unit/listAll],methods=[GET]}" onto public java.util.List<com.crazyboy.mathexam.mybatis.model.Unit> com.crazyboy.mathexam.controller.UnitController.listAll()
-INFO restartedMain org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping - Mapped "{[/unit/updateMaxScore],methods=[GET]}" onto public void com.crazyboy.mathexam.controller.UnitController.updateMaxScore(int,int)
-INFO restartedMain org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping - Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
-INFO restartedMain org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping - Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
-INFO restartedMain org.springframework.web.servlet.handler.SimpleUrlHandlerMapping - Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
-INFO restartedMain org.springframework.web.servlet.handler.SimpleUrlHandlerMapping - Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
-INFO restartedMain org.springframework.boot.devtools.autoconfigure.OptionalLiveReloadServer - LiveReload server is running on port 35729
-INFO restartedMain org.springframework.jmx.export.annotation.AnnotationMBeanExporter - Registering beans for JMX exposure on startup
-INFO restartedMain org.springframework.jmx.export.annotation.AnnotationMBeanExporter - Bean with name 'dataSource' has been autodetected for JMX exposure
-INFO restartedMain org.springframework.jmx.export.annotation.AnnotationMBeanExporter - Located MBean 'dataSource': registering with JMX server as MBean [com.alibaba.druid.pool:name=dataSource,type=DruidDataSource]
-INFO restartedMain org.springframework.boot.web.embedded.tomcat.TomcatWebServer - Tomcat started on port(s): 8003 (https) with context path ''
-INFO restartedMain com.crazyboy.mathexam.MathexamApplication - Started MathexamApplication in 1.007 seconds (JVM running for 73.892)
+INFO restartedMain org.springframework.boot.web.embedded.tomcat.TomcatWebServer - Tomcat started on port(s): 8003 (http) with context path ''
+INFO restartedMain com.crazyboy.mathexam.MathexamApplication - Started MathexamApplication in 0.351 seconds (JVM running for 12099.245)
 INFO restartedMain org.springframework.boot.devtools.autoconfigure.ConditionEvaluationDeltaLoggingListener - Condition evaluation unchanged
-INFO Thread-10 org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext - Closing org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@4326f1ba: startup date [Sat Oct 06 17:00:08 CST 2018]; root of context hierarchy
-INFO Thread-10 org.springframework.jmx.export.annotation.AnnotationMBeanExporter - Unregistering JMX-exposed beans on shutdown
-INFO Thread-10 org.springframework.jmx.export.annotation.AnnotationMBeanExporter - Unregistering JMX-exposed beans
-INFO restartedMain com.crazyboy.mathexam.MathexamApplication - Starting MathexamApplication on lintingmin with PID 19820 (D:\eclipse-workspace\mathexam\target\classes started by crazyboy in D:\eclipse-workspace\mathexam)
+INFO http-nio-8003-exec-1 org.springframework.web.servlet.DispatcherServlet - FrameworkServlet 'dispatcherServlet': initialization started
+INFO http-nio-8003-exec-1 org.springframework.web.servlet.DispatcherServlet - FrameworkServlet 'dispatcherServlet': initialization completed in 2 ms
+INFO http-nio-8003-exec-3 com.alibaba.druid.pool.DruidDataSource - {dataSource-11} inited
+DEBUG http-nio-8003-exec-1 com.crazyboy.mathexam.mybatis.dao.QuestionMapper.selectByUnitId - ==>  Preparing: select question_id, unit_id, answer, content, options, urls from question where unit_id = ? 
+DEBUG http-nio-8003-exec-1 com.crazyboy.mathexam.mybatis.dao.QuestionMapper.selectByUnitId - ==> Parameters: 0(Integer)
+TRACE http-nio-8003-exec-1 com.crazyboy.mathexam.mybatis.dao.QuestionMapper.selectByUnitId - <==    Columns: question_id, unit_id, answer, content, options, urls
+TRACE http-nio-8003-exec-1 com.crazyboy.mathexam.mybatis.dao.QuestionMapper.selectByUnitId - <==        Row: 25, 0, E, <<BLOB>>, <<BLOB>>, <<BLOB>>
+TRACE http-nio-8003-exec-1 com.crazyboy.mathexam.mybatis.dao.QuestionMapper.selectByUnitId - <==        Row: 26, 0, A, <<BLOB>>, <<BLOB>>, <<BLOB>>
+TRACE http-nio-8003-exec-1 com.crazyboy.mathexam.mybatis.dao.QuestionMapper.selectByUnitId - <==        Row: 27, 0, B, <<BLOB>>, <<BLOB>>, <<BLOB>>
+TRACE http-nio-8003-exec-1 com.crazyboy.mathexam.mybatis.dao.QuestionMapper.selectByUnitId - <==        Row: 28, 0, D, <<BLOB>>, <<BLOB>>, <<BLOB>>
+DEBUG http-nio-8003-exec-1 com.crazyboy.mathexam.mybatis.dao.QuestionMapper.selectByUnitId - <==      Total: 4
+DEBUG http-nio-8003-exec-2 com.crazyboy.mathexam.mybatis.dao.QuestionMapper.selectByUnitId - ==>  Preparing: select question_id, unit_id, answer, content, options, urls from question where unit_id = ? 
+DEBUG http-nio-8003-exec-2 com.crazyboy.mathexam.mybatis.dao.QuestionMapper.selectByUnitId - ==> Parameters: 1(Integer)
+TRACE http-nio-8003-exec-2 com.crazyboy.mathexam.mybatis.dao.QuestionMapper.selectByUnitId - <==    Columns: question_id, unit_id, answer, content, options, urls
+TRACE http-nio-8003-exec-2 com.crazyboy.mathexam.mybatis.dao.QuestionMapper.selectByUnitId - <==        Row: 17, 1, B, <<BLOB>>, <<BLOB>>, <<BLOB>>
+TRACE http-nio-8003-exec-2 com.crazyboy.mathexam.mybatis.dao.QuestionMapper.selectByUnitId - <==        Row: 18, 1, B, <<BLOB>>, <<BLOB>>, <<BLOB>>
+TRACE http-nio-8003-exec-2 com.crazyboy.mathexam.mybatis.dao.QuestionMapper.selectByUnitId - <==        Row: 19, 1, B, <<BLOB>>, <<BLOB>>, <<BLOB>>
+TRACE http-nio-8003-exec-2 com.crazyboy.mathexam.mybatis.dao.QuestionMapper.selectByUnitId - <==        Row: 20, 1, A, <<BLOB>>, <<BLOB>>, <<BLOB>>
+DEBUG http-nio-8003-exec-2 com.crazyboy.mathexam.mybatis.dao.QuestionMapper.selectByUnitId - <==      Total: 4
+DEBUG http-nio-8003-exec-3 com.crazyboy.mathexam.mybatis.dao.QuestionMapper.selectByUnitId - ==>  Preparing: select question_id, unit_id, answer, content, options, urls from question where unit_id = ? 
+DEBUG http-nio-8003-exec-3 com.crazyboy.mathexam.mybatis.dao.QuestionMapper.selectByUnitId - ==> Parameters: 2(Integer)
+TRACE http-nio-8003-exec-3 com.crazyboy.mathexam.mybatis.dao.QuestionMapper.selectByUnitId - <==    Columns: question_id, unit_id, answer, content, options, urls
+TRACE http-nio-8003-exec-3 com.crazyboy.mathexam.mybatis.dao.QuestionMapper.selectByUnitId - <==        Row: 21, 2, A, <<BLOB>>, <<BLOB>>, <<BLOB>>
+TRACE http-nio-8003-exec-3 com.crazyboy.mathexam.mybatis.dao.QuestionMapper.selectByUnitId - <==        Row: 22, 2, D, <<BLOB>>, <<BLOB>>, <<BLOB>>
+TRACE http-nio-8003-exec-3 com.crazyboy.mathexam.mybatis.dao.QuestionMapper.selectByUnitId - <==        Row: 23, 2, A, <<BLOB>>, <<BLOB>>, <<BLOB>>
+TRACE http-nio-8003-exec-3 com.crazyboy.mathexam.mybatis.dao.QuestionMapper.selectByUnitId - <==        Row: 24, 2, A, <<BLOB>>, <<BLOB>>, <<BLOB>>
+DEBUG http-nio-8003-exec-3 com.crazyboy.mathexam.mybatis.dao.QuestionMapper.selectByUnitId - <==      Total: 4
+DEBUG http-nio-8003-exec-4 com.crazyboy.mathexam.mybatis.dao.QuestionMapper.selectOptionsByPrimaryKey - ==>  Preparing: select options from question where question_id = ? 
+DEBUG http-nio-8003-exec-4 com.crazyboy.mathexam.mybatis.dao.QuestionMapper.selectOptionsByPrimaryKey - ==> Parameters: 25(Integer)
+TRACE http-nio-8003-exec-4 com.crazyboy.mathexam.mybatis.dao.QuestionMapper.selectOptionsByPrimaryKey - <==    Columns: options
+TRACE http-nio-8003-exec-4 com.crazyboy.mathexam.mybatis.dao.QuestionMapper.selectOptionsByPrimaryKey - <==        Row: <<BLOB>>
+DEBUG http-nio-8003-exec-4 com.crazyboy.mathexam.mybatis.dao.QuestionMapper.selectOptionsByPrimaryKey - <==      Total: 1
+DEBUG http-nio-8003-exec-4 com.crazyboy.mathexam.mybatis.dao.QuestionMapper.modifyOptionsByPrimaryKey - ==>  Preparing: update question set options = ? where question_id = ? 
+DEBUG http-nio-8003-exec-4 com.crazyboy.mathexam.mybatis.dao.QuestionMapper.modifyOptionsByPrimaryKey - ==> Parameters: {"A":"1110","B":"10","C":"12","D":"24","E":"25","F":"36"}(String), 25(Integer)
+DEBUG http-nio-8003-exec-4 com.crazyboy.mathexam.mybatis.dao.QuestionMapper.modifyOptionsByPrimaryKey - <==    Updates: 1
+DEBUG http-nio-8003-exec-6 com.crazyboy.mathexam.mybatis.dao.QuestionMapper.selectOptionsByPrimaryKey - ==>  Preparing: select options from question where question_id = ? 
+DEBUG http-nio-8003-exec-6 com.crazyboy.mathexam.mybatis.dao.QuestionMapper.selectOptionsByPrimaryKey - ==> Parameters: 25(Integer)
+TRACE http-nio-8003-exec-6 com.crazyboy.mathexam.mybatis.dao.QuestionMapper.selectOptionsByPrimaryKey - <==    Columns: options
+TRACE http-nio-8003-exec-6 com.crazyboy.mathexam.mybatis.dao.QuestionMapper.selectOptionsByPrimaryKey - <==        Row: <<BLOB>>
+DEBUG http-nio-8003-exec-6 com.crazyboy.mathexam.mybatis.dao.QuestionMapper.selectOptionsByPrimaryKey - <==      Total: 1
+DEBUG http-nio-8003-exec-6 com.crazyboy.mathexam.mybatis.dao.QuestionMapper.modifyOptionsByPrimaryKey - ==>  Preparing: update question set options = ? where question_id = ? 
+DEBUG http-nio-8003-exec-6 com.crazyboy.mathexam.mybatis.dao.QuestionMapper.modifyOptionsByPrimaryKey - ==> Parameters: {"A":"1110","B":"10","C":"12","D":"90","E":"25","F":"36"}(String), 25(Integer)
+DEBUG http-nio-8003-exec-6 com.crazyboy.mathexam.mybatis.dao.QuestionMapper.modifyOptionsByPrimaryKey - <==    Updates: 1
+INFO Thread-148 org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext - Closing org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@6fff3dba: startup date [Mon Oct 08 15:40:01 CST 2018]; root of context hierarchy
+INFO Thread-148 org.springframework.jmx.export.annotation.AnnotationMBeanExporter - Unregistering JMX-exposed beans on shutdown
+INFO Thread-148 org.springframework.jmx.export.annotation.AnnotationMBeanExporter - Unregistering JMX-exposed beans
+INFO Thread-148 com.alibaba.druid.pool.DruidDataSource - {dataSource-11} closed
+INFO restartedMain com.crazyboy.mathexam.MathexamApplication - Starting MathexamApplication on lintingmin with PID 11564 (D:\eclipse-workspace\mathexam\target\classes started by crazyboy in D:\eclipse-workspace\mathexam)
 INFO restartedMain com.crazyboy.mathexam.MathexamApplication - No active profile set, falling back to default profiles: default
-INFO restartedMain org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext - Refreshing org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@4ca8ad2a: startup date [Sat Oct 06 17:00:14 CST 2018]; root of context hierarchy
-INFO restartedMain org.springframework.boot.web.embedded.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8003 (https)
-INFO localhost-startStop-1 org.springframework.web.context.ContextLoader - Root WebApplicationContext: initialization completed in 377 ms
+INFO restartedMain org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext - Refreshing org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@a651742: startup date [Mon Oct 08 15:41:47 CST 2018]; root of context hierarchy
+INFO restartedMain org.springframework.boot.web.embedded.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8003 (http)
+INFO localhost-startStop-1 org.springframework.web.context.ContextLoader - Root WebApplicationContext: initialization completed in 242 ms
 INFO localhost-startStop-1 org.springframework.boot.web.servlet.ServletRegistrationBean - Servlet dispatcherServlet mapped to [/]
 INFO localhost-startStop-1 org.springframework.boot.web.servlet.FilterRegistrationBean - Mapping filter: 'characterEncodingFilter' to: [/*]
 INFO localhost-startStop-1 org.springframework.boot.web.servlet.FilterRegistrationBean - Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
 INFO localhost-startStop-1 org.springframework.boot.web.servlet.FilterRegistrationBean - Mapping filter: 'httpPutFormContentFilter' to: [/*]
 INFO localhost-startStop-1 org.springframework.boot.web.servlet.FilterRegistrationBean - Mapping filter: 'requestContextFilter' to: [/*]
 INFO restartedMain org.springframework.web.servlet.handler.SimpleUrlHandlerMapping - Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
-INFO restartedMain org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter - Looking for @ControllerAdvice: org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@4ca8ad2a: startup date [Sat Oct 06 17:00:14 CST 2018]; root of context hierarchy
+INFO restartedMain org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter - Looking for @ControllerAdvice: org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@a651742: startup date [Mon Oct 08 15:41:47 CST 2018]; root of context hierarchy
 INFO restartedMain org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping - Mapped "{[/question/delete],methods=[GET]}" onto public void com.crazyboy.mathexam.controller.QuestionController.delete(int)
 INFO restartedMain org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping - Mapped "{[/question/insert],methods=[GET]}" onto public void com.crazyboy.mathexam.controller.QuestionController.insert(java.util.Map<java.lang.String, java.lang.Object>) throws java.io.IOException
 INFO restartedMain org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping - Mapped "{[/question/listQuestionByUnitId],methods=[GET]}" onto public java.util.List<com.crazyboy.mathexam.mybatis.model.Question> com.crazyboy.mathexam.controller.QuestionController.listQuestionByUnitId(int)
+INFO restartedMain org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping - Mapped "{[/question/modifyOptions],methods=[GET]}" onto public void com.crazyboy.mathexam.controller.QuestionController.modifyOptions(int,int,java.lang.String)
 INFO restartedMain org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping - Mapped "{[/question/uploadPic],methods=[POST]}" onto public java.lang.String com.crazyboy.mathexam.controller.QuestionController.uploadPic(org.springframework.web.multipart.MultipartFile[],java.lang.String)
+INFO restartedMain org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping - Mapped "{[/question/modifyContentByQuestionId],methods=[GET]}" onto public void com.crazyboy.mathexam.controller.QuestionController.modifyContentByQuestionId(int,java.lang.String)
 INFO restartedMain org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping - Mapped "{[/unit/listAll],methods=[GET]}" onto public java.util.List<com.crazyboy.mathexam.mybatis.model.Unit> com.crazyboy.mathexam.controller.UnitController.listAll()
 INFO restartedMain org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping - Mapped "{[/unit/updateMaxScore],methods=[GET]}" onto public void com.crazyboy.mathexam.controller.UnitController.updateMaxScore(int,int)
 INFO restartedMain org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping - Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
@@ -101,647 +115,23 @@ INFO restartedMain org.springframework.boot.devtools.autoconfigure.OptionalLiveR
 INFO restartedMain org.springframework.jmx.export.annotation.AnnotationMBeanExporter - Registering beans for JMX exposure on startup
 INFO restartedMain org.springframework.jmx.export.annotation.AnnotationMBeanExporter - Bean with name 'dataSource' has been autodetected for JMX exposure
 INFO restartedMain org.springframework.jmx.export.annotation.AnnotationMBeanExporter - Located MBean 'dataSource': registering with JMX server as MBean [com.alibaba.druid.pool:name=dataSource,type=DruidDataSource]
-INFO restartedMain org.springframework.boot.web.embedded.tomcat.TomcatWebServer - Tomcat started on port(s): 8003 (https) with context path ''
-INFO restartedMain com.crazyboy.mathexam.MathexamApplication - Started MathexamApplication in 0.637 seconds (JVM running for 79.366)
+INFO restartedMain org.springframework.boot.web.embedded.tomcat.TomcatWebServer - Tomcat started on port(s): 8003 (http) with context path ''
+INFO restartedMain com.crazyboy.mathexam.MathexamApplication - Started MathexamApplication in 0.385 seconds (JVM running for 12205.211)
 INFO restartedMain org.springframework.boot.devtools.autoconfigure.ConditionEvaluationDeltaLoggingListener - Condition evaluation unchanged
-INFO Thread-16 org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext - Closing org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@4ca8ad2a: startup date [Sat Oct 06 17:00:14 CST 2018]; root of context hierarchy
-INFO Thread-16 org.springframework.jmx.export.annotation.AnnotationMBeanExporter - Unregistering JMX-exposed beans on shutdown
-INFO Thread-16 org.springframework.jmx.export.annotation.AnnotationMBeanExporter - Unregistering JMX-exposed beans
-INFO restartedMain com.crazyboy.mathexam.MathexamApplication - Starting MathexamApplication on lintingmin with PID 19820 (D:\eclipse-workspace\mathexam\target\classes started by crazyboy in D:\eclipse-workspace\mathexam)
-INFO restartedMain com.crazyboy.mathexam.MathexamApplication - No active profile set, falling back to default profiles: default
-INFO restartedMain org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext - Refreshing org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@172134f8: startup date [Sat Oct 06 20:43:03 CST 2018]; root of context hierarchy
-INFO restartedMain org.springframework.boot.web.embedded.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8013 (https)
-INFO localhost-startStop-1 org.springframework.web.context.ContextLoader - Root WebApplicationContext: initialization completed in 590 ms
-INFO localhost-startStop-1 org.springframework.boot.web.servlet.ServletRegistrationBean - Servlet dispatcherServlet mapped to [/]
-INFO localhost-startStop-1 org.springframework.boot.web.servlet.FilterRegistrationBean - Mapping filter: 'characterEncodingFilter' to: [/*]
-INFO localhost-startStop-1 org.springframework.boot.web.servlet.FilterRegistrationBean - Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
-INFO localhost-startStop-1 org.springframework.boot.web.servlet.FilterRegistrationBean - Mapping filter: 'httpPutFormContentFilter' to: [/*]
-INFO localhost-startStop-1 org.springframework.boot.web.servlet.FilterRegistrationBean - Mapping filter: 'requestContextFilter' to: [/*]
-INFO restartedMain org.springframework.web.servlet.handler.SimpleUrlHandlerMapping - Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
-INFO restartedMain org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter - Looking for @ControllerAdvice: org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@172134f8: startup date [Sat Oct 06 20:43:03 CST 2018]; root of context hierarchy
-INFO restartedMain org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping - Mapped "{[/question/delete],methods=[GET]}" onto public void com.crazyboy.mathexam.controller.QuestionController.delete(int)
-INFO restartedMain org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping - Mapped "{[/question/insert],methods=[GET]}" onto public void com.crazyboy.mathexam.controller.QuestionController.insert(java.util.Map<java.lang.String, java.lang.Object>) throws java.io.IOException
-INFO restartedMain org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping - Mapped "{[/question/listQuestionByUnitId],methods=[GET]}" onto public java.util.List<com.crazyboy.mathexam.mybatis.model.Question> com.crazyboy.mathexam.controller.QuestionController.listQuestionByUnitId(int)
-INFO restartedMain org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping - Mapped "{[/question/uploadPic],methods=[POST]}" onto public java.lang.String com.crazyboy.mathexam.controller.QuestionController.uploadPic(org.springframework.web.multipart.MultipartFile[],java.lang.String)
-INFO restartedMain org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping - Mapped "{[/unit/listAll],methods=[GET]}" onto public java.util.List<com.crazyboy.mathexam.mybatis.model.Unit> com.crazyboy.mathexam.controller.UnitController.listAll()
-INFO restartedMain org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping - Mapped "{[/unit/updateMaxScore],methods=[GET]}" onto public void com.crazyboy.mathexam.controller.UnitController.updateMaxScore(int,int)
-INFO restartedMain org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping - Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
-INFO restartedMain org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping - Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
-INFO restartedMain org.springframework.web.servlet.handler.SimpleUrlHandlerMapping - Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
-INFO restartedMain org.springframework.web.servlet.handler.SimpleUrlHandlerMapping - Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
-INFO restartedMain org.springframework.boot.devtools.autoconfigure.OptionalLiveReloadServer - LiveReload server is running on port 35729
-INFO restartedMain org.springframework.jmx.export.annotation.AnnotationMBeanExporter - Registering beans for JMX exposure on startup
-INFO restartedMain org.springframework.jmx.export.annotation.AnnotationMBeanExporter - Bean with name 'dataSource' has been autodetected for JMX exposure
-INFO restartedMain org.springframework.jmx.export.annotation.AnnotationMBeanExporter - Located MBean 'dataSource': registering with JMX server as MBean [com.alibaba.druid.pool:name=dataSource,type=DruidDataSource]
-INFO restartedMain org.springframework.boot.web.embedded.tomcat.TomcatWebServer - Tomcat started on port(s): 8013 (https) with context path ''
-INFO restartedMain com.crazyboy.mathexam.MathexamApplication - Started MathexamApplication in 0.941 seconds (JVM running for 13454.951)
-INFO restartedMain org.springframework.boot.devtools.autoconfigure.ConditionEvaluationDeltaLoggingListener - Condition evaluation unchanged
-INFO background-preinit org.hibernate.validator.internal.util.Version - HV000001: Hibernate Validator 6.0.9.Final
-INFO restartedMain com.crazyboy.mathexam.MathexamApplication - Starting MathexamApplication on lintingmin with PID 17756 (D:\eclipse-workspace\mathexam\target\classes started by crazyboy in D:\eclipse-workspace\mathexam)
-INFO restartedMain com.crazyboy.mathexam.MathexamApplication - No active profile set, falling back to default profiles: default
-INFO restartedMain org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext - Refreshing org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@5ee9dd8: startup date [Sat Oct 06 20:50:10 CST 2018]; root of context hierarchy
-INFO restartedMain org.springframework.boot.web.embedded.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8013 (https)
-INFO localhost-startStop-1 org.springframework.web.context.ContextLoader - Root WebApplicationContext: initialization completed in 1771 ms
-INFO localhost-startStop-1 org.springframework.boot.web.servlet.ServletRegistrationBean - Servlet dispatcherServlet mapped to [/]
-INFO localhost-startStop-1 org.springframework.boot.web.servlet.FilterRegistrationBean - Mapping filter: 'characterEncodingFilter' to: [/*]
-INFO localhost-startStop-1 org.springframework.boot.web.servlet.FilterRegistrationBean - Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
-INFO localhost-startStop-1 org.springframework.boot.web.servlet.FilterRegistrationBean - Mapping filter: 'httpPutFormContentFilter' to: [/*]
-INFO localhost-startStop-1 org.springframework.boot.web.servlet.FilterRegistrationBean - Mapping filter: 'requestContextFilter' to: [/*]
-INFO restartedMain org.springframework.web.servlet.handler.SimpleUrlHandlerMapping - Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
-INFO restartedMain org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter - Looking for @ControllerAdvice: org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@5ee9dd8: startup date [Sat Oct 06 20:50:10 CST 2018]; root of context hierarchy
-INFO restartedMain org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping - Mapped "{[/question/delete],methods=[GET]}" onto public void com.crazyboy.mathexam.controller.QuestionController.delete(int)
-INFO restartedMain org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping - Mapped "{[/question/insert],methods=[GET]}" onto public void com.crazyboy.mathexam.controller.QuestionController.insert(java.util.Map<java.lang.String, java.lang.Object>) throws java.io.IOException
-INFO restartedMain org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping - Mapped "{[/question/listQuestionByUnitId],methods=[GET]}" onto public java.util.List<com.crazyboy.mathexam.mybatis.model.Question> com.crazyboy.mathexam.controller.QuestionController.listQuestionByUnitId(int)
-INFO restartedMain org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping - Mapped "{[/question/uploadPic],methods=[POST]}" onto public java.lang.String com.crazyboy.mathexam.controller.QuestionController.uploadPic(org.springframework.web.multipart.MultipartFile[],java.lang.String)
-INFO restartedMain org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping - Mapped "{[/unit/updateMaxScore],methods=[GET]}" onto public void com.crazyboy.mathexam.controller.UnitController.updateMaxScore(int,int)
-INFO restartedMain org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping - Mapped "{[/unit/listAll],methods=[GET]}" onto public java.util.List<com.crazyboy.mathexam.mybatis.model.Unit> com.crazyboy.mathexam.controller.UnitController.listAll()
-INFO restartedMain org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping - Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
-INFO restartedMain org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping - Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
-INFO restartedMain org.springframework.web.servlet.handler.SimpleUrlHandlerMapping - Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
-INFO restartedMain org.springframework.web.servlet.handler.SimpleUrlHandlerMapping - Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
-INFO restartedMain org.springframework.boot.devtools.autoconfigure.OptionalLiveReloadServer - LiveReload server is running on port 35729
-INFO restartedMain org.springframework.jmx.export.annotation.AnnotationMBeanExporter - Registering beans for JMX exposure on startup
-INFO restartedMain org.springframework.jmx.export.annotation.AnnotationMBeanExporter - Bean with name 'dataSource' has been autodetected for JMX exposure
-INFO restartedMain org.springframework.jmx.export.annotation.AnnotationMBeanExporter - Located MBean 'dataSource': registering with JMX server as MBean [com.alibaba.druid.pool:name=dataSource,type=DruidDataSource]
-INFO restartedMain org.springframework.boot.web.embedded.tomcat.TomcatWebServer - Tomcat started on port(s): 8013 (https) with context path ''
-INFO restartedMain com.crazyboy.mathexam.MathexamApplication - Started MathexamApplication in 4.014 seconds (JVM running for 4.428)
-INFO https-jsse-nio-8013-exec-5 org.springframework.web.servlet.DispatcherServlet - FrameworkServlet 'dispatcherServlet': initialization started
-INFO https-jsse-nio-8013-exec-5 org.springframework.web.servlet.DispatcherServlet - FrameworkServlet 'dispatcherServlet': initialization completed in 17 ms
-INFO https-jsse-nio-8013-exec-5 com.alibaba.druid.pool.DruidDataSource - {dataSource-1} inited
-DEBUG https-jsse-nio-8013-exec-5 com.crazyboy.mathexam.mybatis.dao.UnitMapper.selectAll - ==>  Preparing: select id, theme, percent, max_score from unit 
-DEBUG https-jsse-nio-8013-exec-5 com.crazyboy.mathexam.mybatis.dao.UnitMapper.selectAll - ==> Parameters: 
-TRACE https-jsse-nio-8013-exec-5 com.crazyboy.mathexam.mybatis.dao.UnitMapper.selectAll - <==    Columns: id, theme, percent, max_score
-TRACE https-jsse-nio-8013-exec-5 com.crazyboy.mathexam.mybatis.dao.UnitMapper.selectAll - <==        Row: 0, 找规律, 0.3, 50
-TRACE https-jsse-nio-8013-exec-5 com.crazyboy.mathexam.mybatis.dao.UnitMapper.selectAll - <==        Row: 1, 列方程, 0.4, 75
-TRACE https-jsse-nio-8013-exec-5 com.crazyboy.mathexam.mybatis.dao.UnitMapper.selectAll - <==        Row: 2, 图形, 0.4, 100
-DEBUG https-jsse-nio-8013-exec-5 com.crazyboy.mathexam.mybatis.dao.UnitMapper.selectAll - <==      Total: 3
-INFO background-preinit org.hibernate.validator.internal.util.Version - HV000001: Hibernate Validator 6.0.9.Final
-INFO main com.crazyboy.mathexam.MathexamApplication - Starting MathexamApplication v0.0.1-SNAPSHOT on lintingmin with PID 7708 (D:\eclipse-workspace\mathexam\target\mathexam.jar started by crazyboy in D:\eclipse-workspace\mathexam)
-INFO main com.crazyboy.mathexam.MathexamApplication - No active profile set, falling back to default profiles: default
-INFO main org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext - Refreshing org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@5fe5c6f: startup date [Sat Oct 06 20:56:53 CST 2018]; root of context hierarchy
-INFO main org.springframework.boot.web.embedded.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8003 (https)
-INFO localhost-startStop-1 org.springframework.web.context.ContextLoader - Root WebApplicationContext: initialization completed in 1575 ms
-INFO localhost-startStop-1 org.springframework.boot.web.servlet.ServletRegistrationBean - Servlet dispatcherServlet mapped to [/]
-INFO localhost-startStop-1 org.springframework.boot.web.servlet.FilterRegistrationBean - Mapping filter: 'characterEncodingFilter' to: [/*]
-INFO localhost-startStop-1 org.springframework.boot.web.servlet.FilterRegistrationBean - Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
-INFO localhost-startStop-1 org.springframework.boot.web.servlet.FilterRegistrationBean - Mapping filter: 'httpPutFormContentFilter' to: [/*]
-INFO localhost-startStop-1 org.springframework.boot.web.servlet.FilterRegistrationBean - Mapping filter: 'requestContextFilter' to: [/*]
-INFO main org.springframework.web.servlet.handler.SimpleUrlHandlerMapping - Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
-INFO main org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter - Looking for @ControllerAdvice: org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@5fe5c6f: startup date [Sat Oct 06 20:56:53 CST 2018]; root of context hierarchy
-INFO main org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping - Mapped "{[/question/delete],methods=[GET]}" onto public void com.crazyboy.mathexam.controller.QuestionController.delete(int)
-INFO main org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping - Mapped "{[/question/insert],methods=[GET]}" onto public void com.crazyboy.mathexam.controller.QuestionController.insert(java.util.Map<java.lang.String, java.lang.Object>) throws java.io.IOException
-INFO main org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping - Mapped "{[/question/uploadPic],methods=[POST]}" onto public java.lang.String com.crazyboy.mathexam.controller.QuestionController.uploadPic(org.springframework.web.multipart.MultipartFile[],java.lang.String)
-INFO main org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping - Mapped "{[/question/listQuestionByUnitId],methods=[GET]}" onto public java.util.List<com.crazyboy.mathexam.mybatis.model.Question> com.crazyboy.mathexam.controller.QuestionController.listQuestionByUnitId(int)
-INFO main org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping - Mapped "{[/unit/updateMaxScore],methods=[GET]}" onto public void com.crazyboy.mathexam.controller.UnitController.updateMaxScore(int,int)
-INFO main org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping - Mapped "{[/unit/listAll],methods=[GET]}" onto public java.util.List<com.crazyboy.mathexam.mybatis.model.Unit> com.crazyboy.mathexam.controller.UnitController.listAll()
-INFO main org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping - Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
-INFO main org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping - Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
-INFO main org.springframework.web.servlet.handler.SimpleUrlHandlerMapping - Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
-INFO main org.springframework.web.servlet.handler.SimpleUrlHandlerMapping - Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
-INFO main org.springframework.jmx.export.annotation.AnnotationMBeanExporter - Registering beans for JMX exposure on startup
-INFO main org.springframework.jmx.export.annotation.AnnotationMBeanExporter - Bean with name 'dataSource' has been autodetected for JMX exposure
-INFO main org.springframework.jmx.export.annotation.AnnotationMBeanExporter - Located MBean 'dataSource': registering with JMX server as MBean [com.alibaba.druid.pool:name=dataSource,type=DruidDataSource]
-INFO main org.springframework.boot.web.embedded.tomcat.TomcatWebServer - Tomcat started on port(s): 8003 (https) with context path ''
-INFO main com.crazyboy.mathexam.MathexamApplication - Started MathexamApplication in 4.086 seconds (JVM running for 4.524)
-INFO https-jsse-nio-8003-exec-4 org.springframework.web.servlet.DispatcherServlet - FrameworkServlet 'dispatcherServlet': initialization started
-INFO https-jsse-nio-8003-exec-4 org.springframework.web.servlet.DispatcherServlet - FrameworkServlet 'dispatcherServlet': initialization completed in 18 ms
-INFO https-jsse-nio-8003-exec-4 com.alibaba.druid.pool.DruidDataSource - {dataSource-1} inited
-DEBUG https-jsse-nio-8003-exec-4 com.crazyboy.mathexam.mybatis.dao.UnitMapper.selectAll - ==>  Preparing: select id, theme, percent, max_score from unit 
-DEBUG https-jsse-nio-8003-exec-4 com.crazyboy.mathexam.mybatis.dao.UnitMapper.selectAll - ==> Parameters: 
-TRACE https-jsse-nio-8003-exec-4 com.crazyboy.mathexam.mybatis.dao.UnitMapper.selectAll - <==    Columns: id, theme, percent, max_score
-TRACE https-jsse-nio-8003-exec-4 com.crazyboy.mathexam.mybatis.dao.UnitMapper.selectAll - <==        Row: 0, �ҹ���, 0.3, 50
-TRACE https-jsse-nio-8003-exec-4 com.crazyboy.mathexam.mybatis.dao.UnitMapper.selectAll - <==        Row: 1, �з���, 0.4, 75
-TRACE https-jsse-nio-8003-exec-4 com.crazyboy.mathexam.mybatis.dao.UnitMapper.selectAll - <==        Row: 2, ͼ��, 0.4, 100
-DEBUG https-jsse-nio-8003-exec-4 com.crazyboy.mathexam.mybatis.dao.UnitMapper.selectAll - <==      Total: 3
-INFO Thread-3 org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext - Closing org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@5fe5c6f: startup date [Sat Oct 06 20:56:53 CST 2018]; root of context hierarchy
-INFO Thread-3 org.springframework.jmx.export.annotation.AnnotationMBeanExporter - Unregistering JMX-exposed beans on shutdown
-INFO Thread-3 org.springframework.jmx.export.annotation.AnnotationMBeanExporter - Unregistering JMX-exposed beans
-INFO Thread-3 com.alibaba.druid.pool.DruidDataSource - {dataSource-1} closed
-INFO background-preinit org.hibernate.validator.internal.util.Version - HV000001: Hibernate Validator 6.0.9.Final
-INFO restartedMain com.crazyboy.mathexam.MathexamApplication - Starting MathexamApplication on lintingmin with PID 7564 (D:\eclipse-workspace\mathexam\target\classes started by crazyboy in D:\eclipse-workspace\mathexam)
-INFO restartedMain com.crazyboy.mathexam.MathexamApplication - No active profile set, falling back to default profiles: default
-INFO restartedMain org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext - Refreshing org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@2c280154: startup date [Sat Oct 06 21:43:08 CST 2018]; root of context hierarchy
-INFO restartedMain org.springframework.boot.web.embedded.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8003 (https) 8002 (http)
-INFO localhost-startStop-1 org.springframework.web.context.ContextLoader - Root WebApplicationContext: initialization completed in 1755 ms
-INFO localhost-startStop-1 org.springframework.boot.web.servlet.ServletRegistrationBean - Servlet dispatcherServlet mapped to [/]
-INFO localhost-startStop-1 org.springframework.boot.web.servlet.FilterRegistrationBean - Mapping filter: 'characterEncodingFilter' to: [/*]
-INFO localhost-startStop-1 org.springframework.boot.web.servlet.FilterRegistrationBean - Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
-INFO localhost-startStop-1 org.springframework.boot.web.servlet.FilterRegistrationBean - Mapping filter: 'httpPutFormContentFilter' to: [/*]
-INFO localhost-startStop-1 org.springframework.boot.web.servlet.FilterRegistrationBean - Mapping filter: 'requestContextFilter' to: [/*]
-INFO restartedMain org.springframework.web.servlet.handler.SimpleUrlHandlerMapping - Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
-INFO restartedMain org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter - Looking for @ControllerAdvice: org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@2c280154: startup date [Sat Oct 06 21:43:08 CST 2018]; root of context hierarchy
-INFO restartedMain org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping - Mapped "{[/question/delete],methods=[GET]}" onto public void com.crazyboy.mathexam.controller.QuestionController.delete(int)
-INFO restartedMain org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping - Mapped "{[/question/insert],methods=[GET]}" onto public void com.crazyboy.mathexam.controller.QuestionController.insert(java.util.Map<java.lang.String, java.lang.Object>) throws java.io.IOException
-INFO restartedMain org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping - Mapped "{[/question/uploadPic],methods=[POST]}" onto public java.lang.String com.crazyboy.mathexam.controller.QuestionController.uploadPic(org.springframework.web.multipart.MultipartFile[],java.lang.String)
-INFO restartedMain org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping - Mapped "{[/question/listQuestionByUnitId],methods=[GET]}" onto public java.util.List<com.crazyboy.mathexam.mybatis.model.Question> com.crazyboy.mathexam.controller.QuestionController.listQuestionByUnitId(int)
-INFO restartedMain org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping - Mapped "{[/unit/listAll],methods=[GET]}" onto public java.util.List<com.crazyboy.mathexam.mybatis.model.Unit> com.crazyboy.mathexam.controller.UnitController.listAll()
-INFO restartedMain org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping - Mapped "{[/unit/updateMaxScore],methods=[GET]}" onto public void com.crazyboy.mathexam.controller.UnitController.updateMaxScore(int,int)
-INFO restartedMain org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping - Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
-INFO restartedMain org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping - Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
-INFO restartedMain org.springframework.web.servlet.handler.SimpleUrlHandlerMapping - Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
-INFO restartedMain org.springframework.web.servlet.handler.SimpleUrlHandlerMapping - Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
-INFO restartedMain org.springframework.boot.devtools.autoconfigure.OptionalLiveReloadServer - LiveReload server is running on port 35729
-INFO restartedMain org.springframework.jmx.export.annotation.AnnotationMBeanExporter - Registering beans for JMX exposure on startup
-INFO restartedMain org.springframework.jmx.export.annotation.AnnotationMBeanExporter - Bean with name 'dataSource' has been autodetected for JMX exposure
-INFO restartedMain org.springframework.jmx.export.annotation.AnnotationMBeanExporter - Located MBean 'dataSource': registering with JMX server as MBean [com.alibaba.druid.pool:name=dataSource,type=DruidDataSource]
-INFO restartedMain org.springframework.boot.web.embedded.tomcat.TomcatWebServer - Tomcat started on port(s): 8003 (https) 8002 (http) with context path ''
-INFO restartedMain com.crazyboy.mathexam.MathexamApplication - Started MathexamApplication in 3.874 seconds (JVM running for 4.312)
-INFO Thread-7 org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext - Closing org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@2c280154: startup date [Sat Oct 06 21:43:08 CST 2018]; root of context hierarchy
-INFO Thread-7 org.springframework.jmx.export.annotation.AnnotationMBeanExporter - Unregistering JMX-exposed beans on shutdown
-INFO Thread-7 org.springframework.jmx.export.annotation.AnnotationMBeanExporter - Unregistering JMX-exposed beans
-INFO restartedMain com.crazyboy.mathexam.MathexamApplication - Starting MathexamApplication on lintingmin with PID 7564 (D:\eclipse-workspace\mathexam\target\classes started by crazyboy in D:\eclipse-workspace\mathexam)
-INFO restartedMain com.crazyboy.mathexam.MathexamApplication - No active profile set, falling back to default profiles: default
-INFO restartedMain org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext - Refreshing org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@50490d56: startup date [Sat Oct 06 21:43:24 CST 2018]; root of context hierarchy
-INFO restartedMain org.springframework.boot.web.embedded.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8003 (https) 8002 (http)
-INFO localhost-startStop-1 org.springframework.web.context.ContextLoader - Root WebApplicationContext: initialization completed in 396 ms
-INFO localhost-startStop-1 org.springframework.boot.web.servlet.ServletRegistrationBean - Servlet dispatcherServlet mapped to [/]
-INFO localhost-startStop-1 org.springframework.boot.web.servlet.FilterRegistrationBean - Mapping filter: 'characterEncodingFilter' to: [/*]
-INFO localhost-startStop-1 org.springframework.boot.web.servlet.FilterRegistrationBean - Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
-INFO localhost-startStop-1 org.springframework.boot.web.servlet.FilterRegistrationBean - Mapping filter: 'httpPutFormContentFilter' to: [/*]
-INFO localhost-startStop-1 org.springframework.boot.web.servlet.FilterRegistrationBean - Mapping filter: 'requestContextFilter' to: [/*]
-INFO restartedMain org.springframework.web.servlet.handler.SimpleUrlHandlerMapping - Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
-INFO restartedMain org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter - Looking for @ControllerAdvice: org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@50490d56: startup date [Sat Oct 06 21:43:24 CST 2018]; root of context hierarchy
-INFO restartedMain org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping - Mapped "{[/question/delete],methods=[GET]}" onto public void com.crazyboy.mathexam.controller.QuestionController.delete(int)
-INFO restartedMain org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping - Mapped "{[/question/insert],methods=[GET]}" onto public void com.crazyboy.mathexam.controller.QuestionController.insert(java.util.Map<java.lang.String, java.lang.Object>) throws java.io.IOException
-INFO restartedMain org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping - Mapped "{[/question/uploadPic],methods=[POST]}" onto public java.lang.String com.crazyboy.mathexam.controller.QuestionController.uploadPic(org.springframework.web.multipart.MultipartFile[],java.lang.String)
-INFO restartedMain org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping - Mapped "{[/question/listQuestionByUnitId],methods=[GET]}" onto public java.util.List<com.crazyboy.mathexam.mybatis.model.Question> com.crazyboy.mathexam.controller.QuestionController.listQuestionByUnitId(int)
-INFO restartedMain org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping - Mapped "{[/unit/listAll],methods=[GET]}" onto public java.util.List<com.crazyboy.mathexam.mybatis.model.Unit> com.crazyboy.mathexam.controller.UnitController.listAll()
-INFO restartedMain org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping - Mapped "{[/unit/updateMaxScore],methods=[GET]}" onto public void com.crazyboy.mathexam.controller.UnitController.updateMaxScore(int,int)
-INFO restartedMain org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping - Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
-INFO restartedMain org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping - Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
-INFO restartedMain org.springframework.web.servlet.handler.SimpleUrlHandlerMapping - Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
-INFO restartedMain org.springframework.web.servlet.handler.SimpleUrlHandlerMapping - Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
-INFO restartedMain org.springframework.boot.devtools.autoconfigure.OptionalLiveReloadServer - LiveReload server is running on port 35729
-INFO restartedMain org.springframework.jmx.export.annotation.AnnotationMBeanExporter - Registering beans for JMX exposure on startup
-INFO restartedMain org.springframework.jmx.export.annotation.AnnotationMBeanExporter - Bean with name 'dataSource' has been autodetected for JMX exposure
-INFO restartedMain org.springframework.jmx.export.annotation.AnnotationMBeanExporter - Located MBean 'dataSource': registering with JMX server as MBean [com.alibaba.druid.pool:name=dataSource,type=DruidDataSource]
-INFO restartedMain org.springframework.boot.web.embedded.tomcat.TomcatWebServer - Tomcat started on port(s): 8003 (https) 8002 (http) with context path ''
-INFO restartedMain com.crazyboy.mathexam.MathexamApplication - Started MathexamApplication in 0.863 seconds (JVM running for 17.997)
-INFO restartedMain org.springframework.boot.devtools.autoconfigure.ConditionEvaluationDeltaLoggingListener - Condition evaluation unchanged
-INFO Thread-11 org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext - Closing org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@50490d56: startup date [Sat Oct 06 21:43:24 CST 2018]; root of context hierarchy
-INFO Thread-11 org.springframework.jmx.export.annotation.AnnotationMBeanExporter - Unregistering JMX-exposed beans on shutdown
-INFO Thread-11 org.springframework.jmx.export.annotation.AnnotationMBeanExporter - Unregistering JMX-exposed beans
-INFO restartedMain com.crazyboy.mathexam.MathexamApplication - Starting MathexamApplication on lintingmin with PID 7564 (D:\eclipse-workspace\mathexam\target\classes started by crazyboy in D:\eclipse-workspace\mathexam)
-INFO restartedMain com.crazyboy.mathexam.MathexamApplication - No active profile set, falling back to default profiles: default
-INFO restartedMain org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext - Refreshing org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@41eb88d8: startup date [Sat Oct 06 21:52:45 CST 2018]; root of context hierarchy
-INFO restartedMain org.springframework.boot.web.embedded.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8002 (https) 8003 (http)
-INFO localhost-startStop-1 org.springframework.web.context.ContextLoader - Root WebApplicationContext: initialization completed in 340 ms
-INFO localhost-startStop-1 org.springframework.boot.web.servlet.ServletRegistrationBean - Servlet dispatcherServlet mapped to [/]
-INFO localhost-startStop-1 org.springframework.boot.web.servlet.FilterRegistrationBean - Mapping filter: 'characterEncodingFilter' to: [/*]
-INFO localhost-startStop-1 org.springframework.boot.web.servlet.FilterRegistrationBean - Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
-INFO localhost-startStop-1 org.springframework.boot.web.servlet.FilterRegistrationBean - Mapping filter: 'httpPutFormContentFilter' to: [/*]
-INFO localhost-startStop-1 org.springframework.boot.web.servlet.FilterRegistrationBean - Mapping filter: 'requestContextFilter' to: [/*]
-INFO restartedMain org.springframework.web.servlet.handler.SimpleUrlHandlerMapping - Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
-INFO restartedMain org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter - Looking for @ControllerAdvice: org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@41eb88d8: startup date [Sat Oct 06 21:52:45 CST 2018]; root of context hierarchy
-INFO restartedMain org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping - Mapped "{[/question/delete],methods=[GET]}" onto public void com.crazyboy.mathexam.controller.QuestionController.delete(int)
-INFO restartedMain org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping - Mapped "{[/question/insert],methods=[GET]}" onto public void com.crazyboy.mathexam.controller.QuestionController.insert(java.util.Map<java.lang.String, java.lang.Object>) throws java.io.IOException
-INFO restartedMain org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping - Mapped "{[/question/uploadPic],methods=[POST]}" onto public java.lang.String com.crazyboy.mathexam.controller.QuestionController.uploadPic(org.springframework.web.multipart.MultipartFile[],java.lang.String)
-INFO restartedMain org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping - Mapped "{[/question/listQuestionByUnitId],methods=[GET]}" onto public java.util.List<com.crazyboy.mathexam.mybatis.model.Question> com.crazyboy.mathexam.controller.QuestionController.listQuestionByUnitId(int)
-INFO restartedMain org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping - Mapped "{[/unit/listAll],methods=[GET]}" onto public java.util.List<com.crazyboy.mathexam.mybatis.model.Unit> com.crazyboy.mathexam.controller.UnitController.listAll()
-INFO restartedMain org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping - Mapped "{[/unit/updateMaxScore],methods=[GET]}" onto public void com.crazyboy.mathexam.controller.UnitController.updateMaxScore(int,int)
-INFO restartedMain org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping - Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
-INFO restartedMain org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping - Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
-INFO restartedMain org.springframework.web.servlet.handler.SimpleUrlHandlerMapping - Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
-INFO restartedMain org.springframework.web.servlet.handler.SimpleUrlHandlerMapping - Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
-INFO restartedMain org.springframework.boot.devtools.autoconfigure.OptionalLiveReloadServer - LiveReload server is running on port 35729
-INFO restartedMain org.springframework.jmx.export.annotation.AnnotationMBeanExporter - Registering beans for JMX exposure on startup
-INFO restartedMain org.springframework.jmx.export.annotation.AnnotationMBeanExporter - Bean with name 'dataSource' has been autodetected for JMX exposure
-INFO restartedMain org.springframework.jmx.export.annotation.AnnotationMBeanExporter - Located MBean 'dataSource': registering with JMX server as MBean [com.alibaba.druid.pool:name=dataSource,type=DruidDataSource]
-INFO restartedMain org.springframework.boot.web.embedded.tomcat.TomcatWebServer - Tomcat started on port(s): 8002 (https) 8003 (http) with context path ''
-INFO restartedMain com.crazyboy.mathexam.MathexamApplication - Started MathexamApplication in 0.791 seconds (JVM running for 578.711)
-INFO restartedMain org.springframework.boot.devtools.autoconfigure.ConditionEvaluationDeltaLoggingListener - Condition evaluation unchanged
-INFO background-preinit org.hibernate.validator.internal.util.Version - HV000001: Hibernate Validator 6.0.9.Final
-INFO restartedMain com.crazyboy.mathexam.MathexamApplication - Starting MathexamApplication on lintingmin with PID 16092 (D:\eclipse-workspace\mathexam\target\classes started by crazyboy in D:\eclipse-workspace\mathexam)
-INFO restartedMain com.crazyboy.mathexam.MathexamApplication - No active profile set, falling back to default profiles: default
-INFO restartedMain org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext - Refreshing org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@23541c9b: startup date [Sat Oct 06 21:53:00 CST 2018]; root of context hierarchy
-INFO restartedMain org.springframework.boot.web.embedded.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8002 (https) 8003 (http)
-INFO localhost-startStop-1 org.springframework.web.context.ContextLoader - Root WebApplicationContext: initialization completed in 1735 ms
-INFO localhost-startStop-1 org.springframework.boot.web.servlet.ServletRegistrationBean - Servlet dispatcherServlet mapped to [/]
-INFO localhost-startStop-1 org.springframework.boot.web.servlet.FilterRegistrationBean - Mapping filter: 'characterEncodingFilter' to: [/*]
-INFO localhost-startStop-1 org.springframework.boot.web.servlet.FilterRegistrationBean - Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
-INFO localhost-startStop-1 org.springframework.boot.web.servlet.FilterRegistrationBean - Mapping filter: 'httpPutFormContentFilter' to: [/*]
-INFO localhost-startStop-1 org.springframework.boot.web.servlet.FilterRegistrationBean - Mapping filter: 'requestContextFilter' to: [/*]
-INFO restartedMain org.springframework.web.servlet.handler.SimpleUrlHandlerMapping - Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
-INFO restartedMain org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter - Looking for @ControllerAdvice: org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@23541c9b: startup date [Sat Oct 06 21:53:00 CST 2018]; root of context hierarchy
-INFO restartedMain org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping - Mapped "{[/question/delete],methods=[GET]}" onto public void com.crazyboy.mathexam.controller.QuestionController.delete(int)
-INFO restartedMain org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping - Mapped "{[/question/insert],methods=[GET]}" onto public void com.crazyboy.mathexam.controller.QuestionController.insert(java.util.Map<java.lang.String, java.lang.Object>) throws java.io.IOException
-INFO restartedMain org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping - Mapped "{[/question/uploadPic],methods=[POST]}" onto public java.lang.String com.crazyboy.mathexam.controller.QuestionController.uploadPic(org.springframework.web.multipart.MultipartFile[],java.lang.String)
-INFO restartedMain org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping - Mapped "{[/question/listQuestionByUnitId],methods=[GET]}" onto public java.util.List<com.crazyboy.mathexam.mybatis.model.Question> com.crazyboy.mathexam.controller.QuestionController.listQuestionByUnitId(int)
-INFO restartedMain org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping - Mapped "{[/unit/listAll],methods=[GET]}" onto public java.util.List<com.crazyboy.mathexam.mybatis.model.Unit> com.crazyboy.mathexam.controller.UnitController.listAll()
-INFO restartedMain org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping - Mapped "{[/unit/updateMaxScore],methods=[GET]}" onto public void com.crazyboy.mathexam.controller.UnitController.updateMaxScore(int,int)
-INFO restartedMain org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping - Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
-INFO restartedMain org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping - Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
-INFO restartedMain org.springframework.web.servlet.handler.SimpleUrlHandlerMapping - Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
-INFO restartedMain org.springframework.web.servlet.handler.SimpleUrlHandlerMapping - Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
-INFO restartedMain org.springframework.boot.devtools.autoconfigure.OptionalLiveReloadServer - LiveReload server is running on port 35729
-INFO restartedMain org.springframework.jmx.export.annotation.AnnotationMBeanExporter - Registering beans for JMX exposure on startup
-INFO restartedMain org.springframework.jmx.export.annotation.AnnotationMBeanExporter - Bean with name 'dataSource' has been autodetected for JMX exposure
-INFO restartedMain org.springframework.jmx.export.annotation.AnnotationMBeanExporter - Located MBean 'dataSource': registering with JMX server as MBean [com.alibaba.druid.pool:name=dataSource,type=DruidDataSource]
-INFO restartedMain org.springframework.boot.web.embedded.tomcat.TomcatWebServer - Tomcat started on port(s): 8002 (https) 8003 (http) with context path ''
-INFO restartedMain com.crazyboy.mathexam.MathexamApplication - Started MathexamApplication in 3.882 seconds (JVM running for 4.331)
-INFO https-jsse-nio-8002-exec-5 org.springframework.web.servlet.DispatcherServlet - FrameworkServlet 'dispatcherServlet': initialization started
-INFO https-jsse-nio-8002-exec-5 org.springframework.web.servlet.DispatcherServlet - FrameworkServlet 'dispatcherServlet': initialization completed in 16 ms
-INFO https-jsse-nio-8002-exec-5 com.alibaba.druid.pool.DruidDataSource - {dataSource-1} inited
-DEBUG https-jsse-nio-8002-exec-5 com.crazyboy.mathexam.mybatis.dao.UnitMapper.selectAll - ==>  Preparing: select id, theme, percent, max_score from unit 
-DEBUG https-jsse-nio-8002-exec-5 com.crazyboy.mathexam.mybatis.dao.UnitMapper.selectAll - ==> Parameters: 
-TRACE https-jsse-nio-8002-exec-5 com.crazyboy.mathexam.mybatis.dao.UnitMapper.selectAll - <==    Columns: id, theme, percent, max_score
-TRACE https-jsse-nio-8002-exec-5 com.crazyboy.mathexam.mybatis.dao.UnitMapper.selectAll - <==        Row: 0, 找规律, 0.3, 50
-TRACE https-jsse-nio-8002-exec-5 com.crazyboy.mathexam.mybatis.dao.UnitMapper.selectAll - <==        Row: 1, 列方程, 0.4, 75
-TRACE https-jsse-nio-8002-exec-5 com.crazyboy.mathexam.mybatis.dao.UnitMapper.selectAll - <==        Row: 2, 图形, 0.4, 100
-DEBUG https-jsse-nio-8002-exec-5 com.crazyboy.mathexam.mybatis.dao.UnitMapper.selectAll - <==      Total: 3
-DEBUG http-nio-8003-exec-8 com.crazyboy.mathexam.mybatis.dao.UnitMapper.selectAll - ==>  Preparing: select id, theme, percent, max_score from unit 
-DEBUG http-nio-8003-exec-8 com.crazyboy.mathexam.mybatis.dao.UnitMapper.selectAll - ==> Parameters: 
-TRACE http-nio-8003-exec-8 com.crazyboy.mathexam.mybatis.dao.UnitMapper.selectAll - <==    Columns: id, theme, percent, max_score
-TRACE http-nio-8003-exec-8 com.crazyboy.mathexam.mybatis.dao.UnitMapper.selectAll - <==        Row: 0, 找规律, 0.3, 50
-TRACE http-nio-8003-exec-8 com.crazyboy.mathexam.mybatis.dao.UnitMapper.selectAll - <==        Row: 1, 列方程, 0.4, 75
-TRACE http-nio-8003-exec-8 com.crazyboy.mathexam.mybatis.dao.UnitMapper.selectAll - <==        Row: 2, 图形, 0.4, 100
-DEBUG http-nio-8003-exec-8 com.crazyboy.mathexam.mybatis.dao.UnitMapper.selectAll - <==      Total: 3
-INFO Thread-7 org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext - Closing org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@23541c9b: startup date [Sat Oct 06 21:53:00 CST 2018]; root of context hierarchy
-INFO Thread-7 org.springframework.jmx.export.annotation.AnnotationMBeanExporter - Unregistering JMX-exposed beans on shutdown
-INFO Thread-7 org.springframework.jmx.export.annotation.AnnotationMBeanExporter - Unregistering JMX-exposed beans
-INFO Thread-7 com.alibaba.druid.pool.DruidDataSource - {dataSource-1} closed
-INFO restartedMain com.crazyboy.mathexam.MathexamApplication - Starting MathexamApplication on lintingmin with PID 16092 (D:\eclipse-workspace\mathexam\target\classes started by crazyboy in D:\eclipse-workspace\mathexam)
-INFO restartedMain com.crazyboy.mathexam.MathexamApplication - No active profile set, falling back to default profiles: default
-INFO restartedMain org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext - Refreshing org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@13be1fb4: startup date [Sat Oct 06 21:56:01 CST 2018]; root of context hierarchy
-INFO restartedMain org.springframework.boot.web.embedded.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8002 (https) 8002 (http)
-INFO localhost-startStop-1 org.springframework.web.context.ContextLoader - Root WebApplicationContext: initialization completed in 403 ms
-INFO localhost-startStop-1 org.springframework.boot.web.servlet.ServletRegistrationBean - Servlet dispatcherServlet mapped to [/]
-INFO localhost-startStop-1 org.springframework.boot.web.servlet.FilterRegistrationBean - Mapping filter: 'characterEncodingFilter' to: [/*]
-INFO localhost-startStop-1 org.springframework.boot.web.servlet.FilterRegistrationBean - Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
-INFO localhost-startStop-1 org.springframework.boot.web.servlet.FilterRegistrationBean - Mapping filter: 'httpPutFormContentFilter' to: [/*]
-INFO localhost-startStop-1 org.springframework.boot.web.servlet.FilterRegistrationBean - Mapping filter: 'requestContextFilter' to: [/*]
-INFO restartedMain org.springframework.web.servlet.handler.SimpleUrlHandlerMapping - Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
-INFO restartedMain org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter - Looking for @ControllerAdvice: org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@13be1fb4: startup date [Sat Oct 06 21:56:01 CST 2018]; root of context hierarchy
-INFO restartedMain org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping - Mapped "{[/question/delete],methods=[GET]}" onto public void com.crazyboy.mathexam.controller.QuestionController.delete(int)
-INFO restartedMain org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping - Mapped "{[/question/insert],methods=[GET]}" onto public void com.crazyboy.mathexam.controller.QuestionController.insert(java.util.Map<java.lang.String, java.lang.Object>) throws java.io.IOException
-INFO restartedMain org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping - Mapped "{[/question/uploadPic],methods=[POST]}" onto public java.lang.String com.crazyboy.mathexam.controller.QuestionController.uploadPic(org.springframework.web.multipart.MultipartFile[],java.lang.String)
-INFO restartedMain org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping - Mapped "{[/question/listQuestionByUnitId],methods=[GET]}" onto public java.util.List<com.crazyboy.mathexam.mybatis.model.Question> com.crazyboy.mathexam.controller.QuestionController.listQuestionByUnitId(int)
-INFO restartedMain org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping - Mapped "{[/unit/listAll],methods=[GET]}" onto public java.util.List<com.crazyboy.mathexam.mybatis.model.Unit> com.crazyboy.mathexam.controller.UnitController.listAll()
-INFO restartedMain org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping - Mapped "{[/unit/updateMaxScore],methods=[GET]}" onto public void com.crazyboy.mathexam.controller.UnitController.updateMaxScore(int,int)
-INFO restartedMain org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping - Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
-INFO restartedMain org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping - Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
-INFO restartedMain org.springframework.web.servlet.handler.SimpleUrlHandlerMapping - Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
-INFO restartedMain org.springframework.web.servlet.handler.SimpleUrlHandlerMapping - Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
-INFO restartedMain org.springframework.boot.devtools.autoconfigure.OptionalLiveReloadServer - LiveReload server is running on port 35729
-INFO restartedMain org.springframework.jmx.export.annotation.AnnotationMBeanExporter - Registering beans for JMX exposure on startup
-INFO restartedMain org.springframework.jmx.export.annotation.AnnotationMBeanExporter - Bean with name 'dataSource' has been autodetected for JMX exposure
-INFO restartedMain org.springframework.jmx.export.annotation.AnnotationMBeanExporter - Located MBean 'dataSource': registering with JMX server as MBean [com.alibaba.druid.pool:name=dataSource,type=DruidDataSource]
-INFO restartedMain org.springframework.boot.autoconfigure.logging.ConditionEvaluationReportLoggingListener - 
-
-Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
-ERROR restartedMain org.springframework.boot.diagnostics.LoggingFailureAnalysisReporter - 
-
-***************************
-APPLICATION FAILED TO START
-***************************
-
-Description:
-
-The Tomcat connector configured to listen on port 8002 failed to start. The port may already be in use or the connector may be misconfigured.
-
-Action:
-
-Verify the connector's configuration, identify and stop any process that's listening on port 8002, or configure this application to listen on another port.
-
-INFO restartedMain org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext - Closing org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@13be1fb4: startup date [Sat Oct 06 21:56:01 CST 2018]; root of context hierarchy
-INFO restartedMain org.springframework.jmx.export.annotation.AnnotationMBeanExporter - Unregistering JMX-exposed beans on shutdown
-INFO restartedMain org.springframework.jmx.export.annotation.AnnotationMBeanExporter - Unregistering JMX-exposed beans
-INFO background-preinit org.hibernate.validator.internal.util.Version - HV000001: Hibernate Validator 6.0.9.Final
-INFO restartedMain com.crazyboy.mathexam.MathexamApplication - Starting MathexamApplication on lintingmin with PID 20460 (D:\eclipse-workspace\mathexam\target\classes started by crazyboy in D:\eclipse-workspace\mathexam)
-INFO restartedMain com.crazyboy.mathexam.MathexamApplication - No active profile set, falling back to default profiles: default
-INFO restartedMain org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext - Refreshing org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@4325f9b4: startup date [Sat Oct 06 21:56:12 CST 2018]; root of context hierarchy
-INFO restartedMain org.springframework.boot.web.embedded.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8002 (https) 8002 (http)
-INFO localhost-startStop-1 org.springframework.web.context.ContextLoader - Root WebApplicationContext: initialization completed in 1755 ms
-INFO localhost-startStop-1 org.springframework.boot.web.servlet.ServletRegistrationBean - Servlet dispatcherServlet mapped to [/]
-INFO localhost-startStop-1 org.springframework.boot.web.servlet.FilterRegistrationBean - Mapping filter: 'characterEncodingFilter' to: [/*]
-INFO localhost-startStop-1 org.springframework.boot.web.servlet.FilterRegistrationBean - Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
-INFO localhost-startStop-1 org.springframework.boot.web.servlet.FilterRegistrationBean - Mapping filter: 'httpPutFormContentFilter' to: [/*]
-INFO localhost-startStop-1 org.springframework.boot.web.servlet.FilterRegistrationBean - Mapping filter: 'requestContextFilter' to: [/*]
-INFO restartedMain org.springframework.web.servlet.handler.SimpleUrlHandlerMapping - Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
-INFO restartedMain org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter - Looking for @ControllerAdvice: org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@4325f9b4: startup date [Sat Oct 06 21:56:12 CST 2018]; root of context hierarchy
-INFO restartedMain org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping - Mapped "{[/question/delete],methods=[GET]}" onto public void com.crazyboy.mathexam.controller.QuestionController.delete(int)
-INFO restartedMain org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping - Mapped "{[/question/insert],methods=[GET]}" onto public void com.crazyboy.mathexam.controller.QuestionController.insert(java.util.Map<java.lang.String, java.lang.Object>) throws java.io.IOException
-INFO restartedMain org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping - Mapped "{[/question/uploadPic],methods=[POST]}" onto public java.lang.String com.crazyboy.mathexam.controller.QuestionController.uploadPic(org.springframework.web.multipart.MultipartFile[],java.lang.String)
-INFO restartedMain org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping - Mapped "{[/question/listQuestionByUnitId],methods=[GET]}" onto public java.util.List<com.crazyboy.mathexam.mybatis.model.Question> com.crazyboy.mathexam.controller.QuestionController.listQuestionByUnitId(int)
-INFO restartedMain org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping - Mapped "{[/unit/listAll],methods=[GET]}" onto public java.util.List<com.crazyboy.mathexam.mybatis.model.Unit> com.crazyboy.mathexam.controller.UnitController.listAll()
-INFO restartedMain org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping - Mapped "{[/unit/updateMaxScore],methods=[GET]}" onto public void com.crazyboy.mathexam.controller.UnitController.updateMaxScore(int,int)
-INFO restartedMain org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping - Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
-INFO restartedMain org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping - Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
-INFO restartedMain org.springframework.web.servlet.handler.SimpleUrlHandlerMapping - Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
-INFO restartedMain org.springframework.web.servlet.handler.SimpleUrlHandlerMapping - Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
-INFO restartedMain org.springframework.boot.devtools.autoconfigure.OptionalLiveReloadServer - LiveReload server is running on port 35729
-INFO restartedMain org.springframework.jmx.export.annotation.AnnotationMBeanExporter - Registering beans for JMX exposure on startup
-INFO restartedMain org.springframework.jmx.export.annotation.AnnotationMBeanExporter - Bean with name 'dataSource' has been autodetected for JMX exposure
-INFO restartedMain org.springframework.jmx.export.annotation.AnnotationMBeanExporter - Located MBean 'dataSource': registering with JMX server as MBean [com.alibaba.druid.pool:name=dataSource,type=DruidDataSource]
-INFO restartedMain org.springframework.boot.autoconfigure.logging.ConditionEvaluationReportLoggingListener - 
-
-Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
-ERROR restartedMain org.springframework.boot.diagnostics.LoggingFailureAnalysisReporter - 
-
-***************************
-APPLICATION FAILED TO START
-***************************
-
-Description:
-
-The Tomcat connector configured to listen on port 8002 failed to start. The port may already be in use or the connector may be misconfigured.
-
-Action:
-
-Verify the connector's configuration, identify and stop any process that's listening on port 8002, or configure this application to listen on another port.
-
-INFO restartedMain org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext - Closing org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@4325f9b4: startup date [Sat Oct 06 21:56:12 CST 2018]; root of context hierarchy
-INFO restartedMain org.springframework.jmx.export.annotation.AnnotationMBeanExporter - Unregistering JMX-exposed beans on shutdown
-INFO restartedMain org.springframework.jmx.export.annotation.AnnotationMBeanExporter - Unregistering JMX-exposed beans
-INFO background-preinit org.hibernate.validator.internal.util.Version - HV000001: Hibernate Validator 6.0.9.Final
-INFO restartedMain com.crazyboy.mathexam.MathexamApplication - Starting MathexamApplication on lintingmin with PID 9072 (D:\eclipse-workspace\mathexam\target\classes started by crazyboy in D:\eclipse-workspace\mathexam)
-INFO restartedMain com.crazyboy.mathexam.MathexamApplication - No active profile set, falling back to default profiles: default
-INFO restartedMain org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext - Refreshing org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@6d3a7592: startup date [Sat Oct 06 21:56:30 CST 2018]; root of context hierarchy
-INFO restartedMain org.springframework.boot.web.embedded.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8002 (https) 8002 (http)
-INFO localhost-startStop-1 org.springframework.web.context.ContextLoader - Root WebApplicationContext: initialization completed in 1650 ms
-INFO localhost-startStop-1 org.springframework.boot.web.servlet.ServletRegistrationBean - Servlet dispatcherServlet mapped to [/]
-INFO localhost-startStop-1 org.springframework.boot.web.servlet.FilterRegistrationBean - Mapping filter: 'characterEncodingFilter' to: [/*]
-INFO localhost-startStop-1 org.springframework.boot.web.servlet.FilterRegistrationBean - Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
-INFO localhost-startStop-1 org.springframework.boot.web.servlet.FilterRegistrationBean - Mapping filter: 'httpPutFormContentFilter' to: [/*]
-INFO localhost-startStop-1 org.springframework.boot.web.servlet.FilterRegistrationBean - Mapping filter: 'requestContextFilter' to: [/*]
-INFO restartedMain org.springframework.web.servlet.handler.SimpleUrlHandlerMapping - Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
-INFO restartedMain org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter - Looking for @ControllerAdvice: org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@6d3a7592: startup date [Sat Oct 06 21:56:30 CST 2018]; root of context hierarchy
-INFO restartedMain org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping - Mapped "{[/question/delete],methods=[GET]}" onto public void com.crazyboy.mathexam.controller.QuestionController.delete(int)
-INFO restartedMain org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping - Mapped "{[/question/insert],methods=[GET]}" onto public void com.crazyboy.mathexam.controller.QuestionController.insert(java.util.Map<java.lang.String, java.lang.Object>) throws java.io.IOException
-INFO restartedMain org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping - Mapped "{[/question/listQuestionByUnitId],methods=[GET]}" onto public java.util.List<com.crazyboy.mathexam.mybatis.model.Question> com.crazyboy.mathexam.controller.QuestionController.listQuestionByUnitId(int)
-INFO restartedMain org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping - Mapped "{[/question/uploadPic],methods=[POST]}" onto public java.lang.String com.crazyboy.mathexam.controller.QuestionController.uploadPic(org.springframework.web.multipart.MultipartFile[],java.lang.String)
-INFO restartedMain org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping - Mapped "{[/unit/updateMaxScore],methods=[GET]}" onto public void com.crazyboy.mathexam.controller.UnitController.updateMaxScore(int,int)
-INFO restartedMain org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping - Mapped "{[/unit/listAll],methods=[GET]}" onto public java.util.List<com.crazyboy.mathexam.mybatis.model.Unit> com.crazyboy.mathexam.controller.UnitController.listAll()
-INFO restartedMain org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping - Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
-INFO restartedMain org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping - Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
-INFO restartedMain org.springframework.web.servlet.handler.SimpleUrlHandlerMapping - Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
-INFO restartedMain org.springframework.web.servlet.handler.SimpleUrlHandlerMapping - Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
-INFO restartedMain org.springframework.boot.devtools.autoconfigure.OptionalLiveReloadServer - LiveReload server is running on port 35729
-INFO restartedMain org.springframework.jmx.export.annotation.AnnotationMBeanExporter - Registering beans for JMX exposure on startup
-INFO restartedMain org.springframework.jmx.export.annotation.AnnotationMBeanExporter - Bean with name 'dataSource' has been autodetected for JMX exposure
-INFO restartedMain org.springframework.jmx.export.annotation.AnnotationMBeanExporter - Located MBean 'dataSource': registering with JMX server as MBean [com.alibaba.druid.pool:name=dataSource,type=DruidDataSource]
-INFO restartedMain org.springframework.boot.autoconfigure.logging.ConditionEvaluationReportLoggingListener - 
-
-Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
-ERROR restartedMain org.springframework.boot.diagnostics.LoggingFailureAnalysisReporter - 
-
-***************************
-APPLICATION FAILED TO START
-***************************
-
-Description:
-
-The Tomcat connector configured to listen on port 8002 failed to start. The port may already be in use or the connector may be misconfigured.
-
-Action:
-
-Verify the connector's configuration, identify and stop any process that's listening on port 8002, or configure this application to listen on another port.
-
-INFO restartedMain org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext - Closing org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@6d3a7592: startup date [Sat Oct 06 21:56:30 CST 2018]; root of context hierarchy
-INFO restartedMain org.springframework.jmx.export.annotation.AnnotationMBeanExporter - Unregistering JMX-exposed beans on shutdown
-INFO restartedMain org.springframework.jmx.export.annotation.AnnotationMBeanExporter - Unregistering JMX-exposed beans
-INFO background-preinit org.hibernate.validator.internal.util.Version - HV000001: Hibernate Validator 6.0.9.Final
-INFO restartedMain com.crazyboy.mathexam.MathexamApplication - Starting MathexamApplication on lintingmin with PID 11928 (D:\eclipse-workspace\mathexam\target\classes started by crazyboy in D:\eclipse-workspace\mathexam)
-INFO restartedMain com.crazyboy.mathexam.MathexamApplication - No active profile set, falling back to default profiles: default
-INFO restartedMain org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext - Refreshing org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@75bae87a: startup date [Sat Oct 06 21:57:36 CST 2018]; root of context hierarchy
-INFO restartedMain org.springframework.boot.web.embedded.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8002 (https) 8002 (http)
-INFO localhost-startStop-1 org.springframework.web.context.ContextLoader - Root WebApplicationContext: initialization completed in 1678 ms
-INFO localhost-startStop-1 org.springframework.boot.web.servlet.ServletRegistrationBean - Servlet dispatcherServlet mapped to [/]
-INFO localhost-startStop-1 org.springframework.boot.web.servlet.FilterRegistrationBean - Mapping filter: 'characterEncodingFilter' to: [/*]
-INFO localhost-startStop-1 org.springframework.boot.web.servlet.FilterRegistrationBean - Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
-INFO localhost-startStop-1 org.springframework.boot.web.servlet.FilterRegistrationBean - Mapping filter: 'httpPutFormContentFilter' to: [/*]
-INFO localhost-startStop-1 org.springframework.boot.web.servlet.FilterRegistrationBean - Mapping filter: 'requestContextFilter' to: [/*]
-INFO restartedMain org.springframework.web.servlet.handler.SimpleUrlHandlerMapping - Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
-INFO restartedMain org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter - Looking for @ControllerAdvice: org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@75bae87a: startup date [Sat Oct 06 21:57:36 CST 2018]; root of context hierarchy
-INFO restartedMain org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping - Mapped "{[/question/delete],methods=[GET]}" onto public void com.crazyboy.mathexam.controller.QuestionController.delete(int)
-INFO restartedMain org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping - Mapped "{[/question/insert],methods=[GET]}" onto public void com.crazyboy.mathexam.controller.QuestionController.insert(java.util.Map<java.lang.String, java.lang.Object>) throws java.io.IOException
-INFO restartedMain org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping - Mapped "{[/question/uploadPic],methods=[POST]}" onto public java.lang.String com.crazyboy.mathexam.controller.QuestionController.uploadPic(org.springframework.web.multipart.MultipartFile[],java.lang.String)
-INFO restartedMain org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping - Mapped "{[/question/listQuestionByUnitId],methods=[GET]}" onto public java.util.List<com.crazyboy.mathexam.mybatis.model.Question> com.crazyboy.mathexam.controller.QuestionController.listQuestionByUnitId(int)
-INFO restartedMain org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping - Mapped "{[/unit/updateMaxScore],methods=[GET]}" onto public void com.crazyboy.mathexam.controller.UnitController.updateMaxScore(int,int)
-INFO restartedMain org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping - Mapped "{[/unit/listAll],methods=[GET]}" onto public java.util.List<com.crazyboy.mathexam.mybatis.model.Unit> com.crazyboy.mathexam.controller.UnitController.listAll()
-INFO restartedMain org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping - Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
-INFO restartedMain org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping - Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
-INFO restartedMain org.springframework.web.servlet.handler.SimpleUrlHandlerMapping - Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
-INFO restartedMain org.springframework.web.servlet.handler.SimpleUrlHandlerMapping - Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
-INFO restartedMain org.springframework.boot.devtools.autoconfigure.OptionalLiveReloadServer - LiveReload server is running on port 35729
-INFO restartedMain org.springframework.jmx.export.annotation.AnnotationMBeanExporter - Registering beans for JMX exposure on startup
-INFO restartedMain org.springframework.jmx.export.annotation.AnnotationMBeanExporter - Bean with name 'dataSource' has been autodetected for JMX exposure
-INFO restartedMain org.springframework.jmx.export.annotation.AnnotationMBeanExporter - Located MBean 'dataSource': registering with JMX server as MBean [com.alibaba.druid.pool:name=dataSource,type=DruidDataSource]
-INFO restartedMain org.springframework.boot.autoconfigure.logging.ConditionEvaluationReportLoggingListener - 
-
-Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
-ERROR restartedMain org.springframework.boot.diagnostics.LoggingFailureAnalysisReporter - 
-
-***************************
-APPLICATION FAILED TO START
-***************************
-
-Description:
-
-The Tomcat connector configured to listen on port 8002 failed to start. The port may already be in use or the connector may be misconfigured.
-
-Action:
-
-Verify the connector's configuration, identify and stop any process that's listening on port 8002, or configure this application to listen on another port.
-
-INFO restartedMain org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext - Closing org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@75bae87a: startup date [Sat Oct 06 21:57:36 CST 2018]; root of context hierarchy
-INFO restartedMain org.springframework.jmx.export.annotation.AnnotationMBeanExporter - Unregistering JMX-exposed beans on shutdown
-INFO restartedMain org.springframework.jmx.export.annotation.AnnotationMBeanExporter - Unregistering JMX-exposed beans
-INFO background-preinit org.hibernate.validator.internal.util.Version - HV000001: Hibernate Validator 6.0.9.Final
-INFO restartedMain com.crazyboy.mathexam.MathexamApplication - Starting MathexamApplication on lintingmin with PID 4244 (D:\eclipse-workspace\mathexam\target\classes started by crazyboy in D:\eclipse-workspace\mathexam)
-INFO restartedMain com.crazyboy.mathexam.MathexamApplication - No active profile set, falling back to default profiles: default
-INFO restartedMain org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext - Refreshing org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@4b6eae1f: startup date [Sat Oct 06 22:00:37 CST 2018]; root of context hierarchy
-INFO restartedMain org.springframework.boot.web.embedded.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8002 (https) 8003 (http)
-INFO localhost-startStop-1 org.springframework.web.context.ContextLoader - Root WebApplicationContext: initialization completed in 1720 ms
-INFO localhost-startStop-1 org.springframework.boot.web.servlet.ServletRegistrationBean - Servlet dispatcherServlet mapped to [/]
-INFO localhost-startStop-1 org.springframework.boot.web.servlet.FilterRegistrationBean - Mapping filter: 'characterEncodingFilter' to: [/*]
-INFO localhost-startStop-1 org.springframework.boot.web.servlet.FilterRegistrationBean - Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
-INFO localhost-startStop-1 org.springframework.boot.web.servlet.FilterRegistrationBean - Mapping filter: 'httpPutFormContentFilter' to: [/*]
-INFO localhost-startStop-1 org.springframework.boot.web.servlet.FilterRegistrationBean - Mapping filter: 'requestContextFilter' to: [/*]
-INFO restartedMain org.springframework.web.servlet.handler.SimpleUrlHandlerMapping - Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
-INFO restartedMain org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter - Looking for @ControllerAdvice: org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@4b6eae1f: startup date [Sat Oct 06 22:00:37 CST 2018]; root of context hierarchy
-INFO restartedMain org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping - Mapped "{[/question/delete],methods=[GET]}" onto public void com.crazyboy.mathexam.controller.QuestionController.delete(int)
-INFO restartedMain org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping - Mapped "{[/question/insert],methods=[GET]}" onto public void com.crazyboy.mathexam.controller.QuestionController.insert(java.util.Map<java.lang.String, java.lang.Object>) throws java.io.IOException
-INFO restartedMain org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping - Mapped "{[/question/listQuestionByUnitId],methods=[GET]}" onto public java.util.List<com.crazyboy.mathexam.mybatis.model.Question> com.crazyboy.mathexam.controller.QuestionController.listQuestionByUnitId(int)
-INFO restartedMain org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping - Mapped "{[/question/uploadPic],methods=[POST]}" onto public java.lang.String com.crazyboy.mathexam.controller.QuestionController.uploadPic(org.springframework.web.multipart.MultipartFile[],java.lang.String)
-INFO restartedMain org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping - Mapped "{[/unit/updateMaxScore],methods=[GET]}" onto public void com.crazyboy.mathexam.controller.UnitController.updateMaxScore(int,int)
-INFO restartedMain org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping - Mapped "{[/unit/listAll],methods=[GET]}" onto public java.util.List<com.crazyboy.mathexam.mybatis.model.Unit> com.crazyboy.mathexam.controller.UnitController.listAll()
-INFO restartedMain org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping - Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
-INFO restartedMain org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping - Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
-INFO restartedMain org.springframework.web.servlet.handler.SimpleUrlHandlerMapping - Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
-INFO restartedMain org.springframework.web.servlet.handler.SimpleUrlHandlerMapping - Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
-INFO restartedMain org.springframework.boot.devtools.autoconfigure.OptionalLiveReloadServer - LiveReload server is running on port 35729
-INFO restartedMain org.springframework.jmx.export.annotation.AnnotationMBeanExporter - Registering beans for JMX exposure on startup
-INFO restartedMain org.springframework.jmx.export.annotation.AnnotationMBeanExporter - Bean with name 'dataSource' has been autodetected for JMX exposure
-INFO restartedMain org.springframework.jmx.export.annotation.AnnotationMBeanExporter - Located MBean 'dataSource': registering with JMX server as MBean [com.alibaba.druid.pool:name=dataSource,type=DruidDataSource]
-INFO restartedMain org.springframework.boot.web.embedded.tomcat.TomcatWebServer - Tomcat started on port(s): 8002 (https) 8003 (http) with context path ''
-INFO restartedMain com.crazyboy.mathexam.MathexamApplication - Started MathexamApplication in 3.874 seconds (JVM running for 4.369)
-INFO background-preinit org.hibernate.validator.internal.util.Version - HV000001: Hibernate Validator 6.0.9.Final
-INFO restartedMain com.crazyboy.mathexam.MathexamApplication - Starting MathexamApplication on lintingmin with PID 7072 (D:\eclipse-workspace\mathexam\target\classes started by crazyboy in D:\eclipse-workspace\mathexam)
-INFO restartedMain com.crazyboy.mathexam.MathexamApplication - No active profile set, falling back to default profiles: default
-INFO restartedMain org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext - Refreshing org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@4325f9b4: startup date [Sat Oct 06 22:01:18 CST 2018]; root of context hierarchy
-INFO restartedMain org.springframework.boot.web.embedded.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8003 (https) 8002 (http)
-INFO localhost-startStop-1 org.springframework.web.context.ContextLoader - Root WebApplicationContext: initialization completed in 1681 ms
-INFO localhost-startStop-1 org.springframework.boot.web.servlet.ServletRegistrationBean - Servlet dispatcherServlet mapped to [/]
-INFO localhost-startStop-1 org.springframework.boot.web.servlet.FilterRegistrationBean - Mapping filter: 'characterEncodingFilter' to: [/*]
-INFO localhost-startStop-1 org.springframework.boot.web.servlet.FilterRegistrationBean - Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
-INFO localhost-startStop-1 org.springframework.boot.web.servlet.FilterRegistrationBean - Mapping filter: 'httpPutFormContentFilter' to: [/*]
-INFO localhost-startStop-1 org.springframework.boot.web.servlet.FilterRegistrationBean - Mapping filter: 'requestContextFilter' to: [/*]
-INFO restartedMain org.springframework.web.servlet.handler.SimpleUrlHandlerMapping - Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
-INFO restartedMain org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter - Looking for @ControllerAdvice: org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@4325f9b4: startup date [Sat Oct 06 22:01:18 CST 2018]; root of context hierarchy
-INFO restartedMain org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping - Mapped "{[/question/delete],methods=[GET]}" onto public void com.crazyboy.mathexam.controller.QuestionController.delete(int)
-INFO restartedMain org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping - Mapped "{[/question/insert],methods=[GET]}" onto public void com.crazyboy.mathexam.controller.QuestionController.insert(java.util.Map<java.lang.String, java.lang.Object>) throws java.io.IOException
-INFO restartedMain org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping - Mapped "{[/question/listQuestionByUnitId],methods=[GET]}" onto public java.util.List<com.crazyboy.mathexam.mybatis.model.Question> com.crazyboy.mathexam.controller.QuestionController.listQuestionByUnitId(int)
-INFO restartedMain org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping - Mapped "{[/question/uploadPic],methods=[POST]}" onto public java.lang.String com.crazyboy.mathexam.controller.QuestionController.uploadPic(org.springframework.web.multipart.MultipartFile[],java.lang.String)
-INFO restartedMain org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping - Mapped "{[/unit/listAll],methods=[GET]}" onto public java.util.List<com.crazyboy.mathexam.mybatis.model.Unit> com.crazyboy.mathexam.controller.UnitController.listAll()
-INFO restartedMain org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping - Mapped "{[/unit/updateMaxScore],methods=[GET]}" onto public void com.crazyboy.mathexam.controller.UnitController.updateMaxScore(int,int)
-INFO restartedMain org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping - Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
-INFO restartedMain org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping - Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
-INFO restartedMain org.springframework.web.servlet.handler.SimpleUrlHandlerMapping - Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
-INFO restartedMain org.springframework.web.servlet.handler.SimpleUrlHandlerMapping - Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
-INFO restartedMain org.springframework.boot.devtools.autoconfigure.OptionalLiveReloadServer - LiveReload server is running on port 35729
-INFO restartedMain org.springframework.jmx.export.annotation.AnnotationMBeanExporter - Registering beans for JMX exposure on startup
-INFO restartedMain org.springframework.jmx.export.annotation.AnnotationMBeanExporter - Bean with name 'dataSource' has been autodetected for JMX exposure
-INFO restartedMain org.springframework.jmx.export.annotation.AnnotationMBeanExporter - Located MBean 'dataSource': registering with JMX server as MBean [com.alibaba.druid.pool:name=dataSource,type=DruidDataSource]
-INFO restartedMain org.springframework.boot.web.embedded.tomcat.TomcatWebServer - Tomcat started on port(s): 8003 (https) 8002 (http) with context path ''
-INFO restartedMain com.crazyboy.mathexam.MathexamApplication - Started MathexamApplication in 3.895 seconds (JVM running for 4.34)
-INFO Thread-7 org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext - Closing org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@4325f9b4: startup date [Sat Oct 06 22:01:18 CST 2018]; root of context hierarchy
-INFO Thread-7 org.springframework.jmx.export.annotation.AnnotationMBeanExporter - Unregistering JMX-exposed beans on shutdown
-INFO Thread-7 org.springframework.jmx.export.annotation.AnnotationMBeanExporter - Unregistering JMX-exposed beans
-INFO restartedMain com.crazyboy.mathexam.MathexamApplication - Starting MathexamApplication on lintingmin with PID 7072 (D:\eclipse-workspace\mathexam\target\classes started by crazyboy in D:\eclipse-workspace\mathexam)
-INFO restartedMain com.crazyboy.mathexam.MathexamApplication - No active profile set, falling back to default profiles: default
-INFO restartedMain org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext - Refreshing org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@5771907f: startup date [Sat Oct 06 22:01:32 CST 2018]; root of context hierarchy
-INFO restartedMain org.springframework.boot.web.embedded.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8003 (https) 8002 (http)
-INFO localhost-startStop-1 org.springframework.web.context.ContextLoader - Root WebApplicationContext: initialization completed in 357 ms
-INFO localhost-startStop-1 org.springframework.boot.web.servlet.ServletRegistrationBean - Servlet dispatcherServlet mapped to [/]
-INFO localhost-startStop-1 org.springframework.boot.web.servlet.FilterRegistrationBean - Mapping filter: 'characterEncodingFilter' to: [/*]
-INFO localhost-startStop-1 org.springframework.boot.web.servlet.FilterRegistrationBean - Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
-INFO localhost-startStop-1 org.springframework.boot.web.servlet.FilterRegistrationBean - Mapping filter: 'httpPutFormContentFilter' to: [/*]
-INFO localhost-startStop-1 org.springframework.boot.web.servlet.FilterRegistrationBean - Mapping filter: 'requestContextFilter' to: [/*]
-INFO restartedMain org.springframework.web.servlet.handler.SimpleUrlHandlerMapping - Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
-INFO restartedMain org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter - Looking for @ControllerAdvice: org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@5771907f: startup date [Sat Oct 06 22:01:32 CST 2018]; root of context hierarchy
-INFO restartedMain org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping - Mapped "{[/question/delete],methods=[GET]}" onto public void com.crazyboy.mathexam.controller.QuestionController.delete(int)
-INFO restartedMain org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping - Mapped "{[/question/insert],methods=[GET]}" onto public void com.crazyboy.mathexam.controller.QuestionController.insert(java.util.Map<java.lang.String, java.lang.Object>) throws java.io.IOException
-INFO restartedMain org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping - Mapped "{[/question/listQuestionByUnitId],methods=[GET]}" onto public java.util.List<com.crazyboy.mathexam.mybatis.model.Question> com.crazyboy.mathexam.controller.QuestionController.listQuestionByUnitId(int)
-INFO restartedMain org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping - Mapped "{[/question/uploadPic],methods=[POST]}" onto public java.lang.String com.crazyboy.mathexam.controller.QuestionController.uploadPic(org.springframework.web.multipart.MultipartFile[],java.lang.String)
-INFO restartedMain org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping - Mapped "{[/unit/listAll],methods=[GET]}" onto public java.util.List<com.crazyboy.mathexam.mybatis.model.Unit> com.crazyboy.mathexam.controller.UnitController.listAll()
-INFO restartedMain org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping - Mapped "{[/unit/updateMaxScore],methods=[GET]}" onto public void com.crazyboy.mathexam.controller.UnitController.updateMaxScore(int,int)
-INFO restartedMain org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping - Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
-INFO restartedMain org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping - Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
-INFO restartedMain org.springframework.web.servlet.handler.SimpleUrlHandlerMapping - Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
-INFO restartedMain org.springframework.web.servlet.handler.SimpleUrlHandlerMapping - Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
-INFO restartedMain org.springframework.boot.devtools.autoconfigure.OptionalLiveReloadServer - LiveReload server is running on port 35729
-INFO restartedMain org.springframework.jmx.export.annotation.AnnotationMBeanExporter - Registering beans for JMX exposure on startup
-INFO restartedMain org.springframework.jmx.export.annotation.AnnotationMBeanExporter - Bean with name 'dataSource' has been autodetected for JMX exposure
-INFO restartedMain org.springframework.jmx.export.annotation.AnnotationMBeanExporter - Located MBean 'dataSource': registering with JMX server as MBean [com.alibaba.druid.pool:name=dataSource,type=DruidDataSource]
-INFO restartedMain org.springframework.boot.web.embedded.tomcat.TomcatWebServer - Tomcat started on port(s): 8003 (https) 8002 (http) with context path ''
-INFO restartedMain com.crazyboy.mathexam.MathexamApplication - Started MathexamApplication in 0.8 seconds (JVM running for 14.823)
-INFO restartedMain org.springframework.boot.devtools.autoconfigure.ConditionEvaluationDeltaLoggingListener - Condition evaluation unchanged
-INFO background-preinit org.hibernate.validator.internal.util.Version - HV000001: Hibernate Validator 6.0.9.Final
-INFO restartedMain com.crazyboy.mathexam.MathexamApplication - Starting MathexamApplication on lintingmin with PID 916 (D:\eclipse-workspace\mathexam\target\classes started by crazyboy in D:\eclipse-workspace\mathexam)
-INFO restartedMain com.crazyboy.mathexam.MathexamApplication - No active profile set, falling back to default profiles: default
-INFO restartedMain org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext - Refreshing org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@42cc9c4e: startup date [Sat Oct 06 22:21:24 CST 2018]; root of context hierarchy
-INFO restartedMain org.springframework.boot.web.embedded.tomcat.TomcatWebServer - Tomcat initialized with port(s): 443 (https) 80 (http)
-INFO localhost-startStop-1 org.springframework.web.context.ContextLoader - Root WebApplicationContext: initialization completed in 1691 ms
-INFO localhost-startStop-1 org.springframework.boot.web.servlet.ServletRegistrationBean - Servlet dispatcherServlet mapped to [/]
-INFO localhost-startStop-1 org.springframework.boot.web.servlet.FilterRegistrationBean - Mapping filter: 'characterEncodingFilter' to: [/*]
-INFO localhost-startStop-1 org.springframework.boot.web.servlet.FilterRegistrationBean - Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
-INFO localhost-startStop-1 org.springframework.boot.web.servlet.FilterRegistrationBean - Mapping filter: 'httpPutFormContentFilter' to: [/*]
-INFO localhost-startStop-1 org.springframework.boot.web.servlet.FilterRegistrationBean - Mapping filter: 'requestContextFilter' to: [/*]
-INFO restartedMain org.springframework.web.servlet.handler.SimpleUrlHandlerMapping - Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
-INFO restartedMain org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter - Looking for @ControllerAdvice: org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@42cc9c4e: startup date [Sat Oct 06 22:21:24 CST 2018]; root of context hierarchy
-INFO restartedMain org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping - Mapped "{[/question/delete],methods=[GET]}" onto public void com.crazyboy.mathexam.controller.QuestionController.delete(int)
-INFO restartedMain org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping - Mapped "{[/question/insert],methods=[GET]}" onto public void com.crazyboy.mathexam.controller.QuestionController.insert(java.util.Map<java.lang.String, java.lang.Object>) throws java.io.IOException
-INFO restartedMain org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping - Mapped "{[/question/listQuestionByUnitId],methods=[GET]}" onto public java.util.List<com.crazyboy.mathexam.mybatis.model.Question> com.crazyboy.mathexam.controller.QuestionController.listQuestionByUnitId(int)
-INFO restartedMain org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping - Mapped "{[/question/uploadPic],methods=[POST]}" onto public java.lang.String com.crazyboy.mathexam.controller.QuestionController.uploadPic(org.springframework.web.multipart.MultipartFile[],java.lang.String)
-INFO restartedMain org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping - Mapped "{[/unit/updateMaxScore],methods=[GET]}" onto public void com.crazyboy.mathexam.controller.UnitController.updateMaxScore(int,int)
-INFO restartedMain org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping - Mapped "{[/unit/listAll],methods=[GET]}" onto public java.util.List<com.crazyboy.mathexam.mybatis.model.Unit> com.crazyboy.mathexam.controller.UnitController.listAll()
-INFO restartedMain org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping - Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
-INFO restartedMain org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping - Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
-INFO restartedMain org.springframework.web.servlet.handler.SimpleUrlHandlerMapping - Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
-INFO restartedMain org.springframework.web.servlet.handler.SimpleUrlHandlerMapping - Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
-INFO restartedMain org.springframework.boot.devtools.autoconfigure.OptionalLiveReloadServer - LiveReload server is running on port 35729
-INFO restartedMain org.springframework.jmx.export.annotation.AnnotationMBeanExporter - Registering beans for JMX exposure on startup
-INFO restartedMain org.springframework.jmx.export.annotation.AnnotationMBeanExporter - Bean with name 'dataSource' has been autodetected for JMX exposure
-INFO restartedMain org.springframework.jmx.export.annotation.AnnotationMBeanExporter - Located MBean 'dataSource': registering with JMX server as MBean [com.alibaba.druid.pool:name=dataSource,type=DruidDataSource]
-INFO restartedMain org.springframework.boot.autoconfigure.logging.ConditionEvaluationReportLoggingListener - 
-
-Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
-ERROR restartedMain org.springframework.boot.diagnostics.LoggingFailureAnalysisReporter - 
-
-***************************
-APPLICATION FAILED TO START
-***************************
-
-Description:
-
-The Tomcat connector configured to listen on port 443 failed to start. The port may already be in use or the connector may be misconfigured.
-
-Action:
-
-Verify the connector's configuration, identify and stop any process that's listening on port 443, or configure this application to listen on another port.
-
-INFO restartedMain org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext - Closing org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@42cc9c4e: startup date [Sat Oct 06 22:21:24 CST 2018]; root of context hierarchy
-INFO restartedMain org.springframework.jmx.export.annotation.AnnotationMBeanExporter - Unregistering JMX-exposed beans on shutdown
-INFO restartedMain org.springframework.jmx.export.annotation.AnnotationMBeanExporter - Unregistering JMX-exposed beans
-INFO background-preinit org.hibernate.validator.internal.util.Version - HV000001: Hibernate Validator 6.0.9.Final
-INFO restartedMain com.crazyboy.mathexam.MathexamApplication - Starting MathexamApplication on lintingmin with PID 16424 (D:\eclipse-workspace\mathexam\target\classes started by crazyboy in D:\eclipse-workspace\mathexam)
-INFO restartedMain com.crazyboy.mathexam.MathexamApplication - No active profile set, falling back to default profiles: default
-INFO restartedMain org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext - Refreshing org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@7b4fbf3e: startup date [Sat Oct 06 22:21:43 CST 2018]; root of context hierarchy
-INFO restartedMain org.springframework.boot.web.embedded.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8003 (https) 80 (http)
-INFO localhost-startStop-1 org.springframework.web.context.ContextLoader - Root WebApplicationContext: initialization completed in 1703 ms
-INFO localhost-startStop-1 org.springframework.boot.web.servlet.ServletRegistrationBean - Servlet dispatcherServlet mapped to [/]
-INFO localhost-startStop-1 org.springframework.boot.web.servlet.FilterRegistrationBean - Mapping filter: 'characterEncodingFilter' to: [/*]
-INFO localhost-startStop-1 org.springframework.boot.web.servlet.FilterRegistrationBean - Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
-INFO localhost-startStop-1 org.springframework.boot.web.servlet.FilterRegistrationBean - Mapping filter: 'httpPutFormContentFilter' to: [/*]
-INFO localhost-startStop-1 org.springframework.boot.web.servlet.FilterRegistrationBean - Mapping filter: 'requestContextFilter' to: [/*]
-INFO restartedMain org.springframework.web.servlet.handler.SimpleUrlHandlerMapping - Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
-INFO restartedMain org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter - Looking for @ControllerAdvice: org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@7b4fbf3e: startup date [Sat Oct 06 22:21:43 CST 2018]; root of context hierarchy
-INFO restartedMain org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping - Mapped "{[/question/delete],methods=[GET]}" onto public void com.crazyboy.mathexam.controller.QuestionController.delete(int)
-INFO restartedMain org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping - Mapped "{[/question/insert],methods=[GET]}" onto public void com.crazyboy.mathexam.controller.QuestionController.insert(java.util.Map<java.lang.String, java.lang.Object>) throws java.io.IOException
-INFO restartedMain org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping - Mapped "{[/question/uploadPic],methods=[POST]}" onto public java.lang.String com.crazyboy.mathexam.controller.QuestionController.uploadPic(org.springframework.web.multipart.MultipartFile[],java.lang.String)
-INFO restartedMain org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping - Mapped "{[/question/listQuestionByUnitId],methods=[GET]}" onto public java.util.List<com.crazyboy.mathexam.mybatis.model.Question> com.crazyboy.mathexam.controller.QuestionController.listQuestionByUnitId(int)
-INFO restartedMain org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping - Mapped "{[/unit/listAll],methods=[GET]}" onto public java.util.List<com.crazyboy.mathexam.mybatis.model.Unit> com.crazyboy.mathexam.controller.UnitController.listAll()
-INFO restartedMain org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping - Mapped "{[/unit/updateMaxScore],methods=[GET]}" onto public void com.crazyboy.mathexam.controller.UnitController.updateMaxScore(int,int)
-INFO restartedMain org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping - Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
-INFO restartedMain org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping - Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
-INFO restartedMain org.springframework.web.servlet.handler.SimpleUrlHandlerMapping - Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
-INFO restartedMain org.springframework.web.servlet.handler.SimpleUrlHandlerMapping - Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
-INFO restartedMain org.springframework.boot.devtools.autoconfigure.OptionalLiveReloadServer - LiveReload server is running on port 35729
-INFO restartedMain org.springframework.jmx.export.annotation.AnnotationMBeanExporter - Registering beans for JMX exposure on startup
-INFO restartedMain org.springframework.jmx.export.annotation.AnnotationMBeanExporter - Bean with name 'dataSource' has been autodetected for JMX exposure
-INFO restartedMain org.springframework.jmx.export.annotation.AnnotationMBeanExporter - Located MBean 'dataSource': registering with JMX server as MBean [com.alibaba.druid.pool:name=dataSource,type=DruidDataSource]
-INFO restartedMain org.springframework.boot.web.embedded.tomcat.TomcatWebServer - Tomcat started on port(s): 8003 (https) 80 (http) with context path ''
-INFO restartedMain com.crazyboy.mathexam.MathexamApplication - Started MathexamApplication in 3.863 seconds (JVM running for 4.297)
-INFO Thread-7 org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext - Closing org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@7b4fbf3e: startup date [Sat Oct 06 22:21:43 CST 2018]; root of context hierarchy
-INFO Thread-7 org.springframework.jmx.export.annotation.AnnotationMBeanExporter - Unregistering JMX-exposed beans on shutdown
-INFO Thread-7 org.springframework.jmx.export.annotation.AnnotationMBeanExporter - Unregistering JMX-exposed beans
-INFO restartedMain com.crazyboy.mathexam.MathexamApplication - Starting MathexamApplication on lintingmin with PID 16424 (D:\eclipse-workspace\mathexam\target\classes started by crazyboy in D:\eclipse-workspace\mathexam)
-INFO restartedMain com.crazyboy.mathexam.MathexamApplication - No active profile set, falling back to default profiles: default
-INFO restartedMain org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext - Refreshing org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@70de7195: startup date [Sat Oct 06 22:22:02 CST 2018]; root of context hierarchy
-INFO restartedMain org.springframework.boot.web.embedded.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8003 (https) 80 (http)
-INFO localhost-startStop-1 org.springframework.web.context.ContextLoader - Root WebApplicationContext: initialization completed in 387 ms
-INFO localhost-startStop-1 org.springframework.boot.web.servlet.ServletRegistrationBean - Servlet dispatcherServlet mapped to [/]
-INFO localhost-startStop-1 org.springframework.boot.web.servlet.FilterRegistrationBean - Mapping filter: 'characterEncodingFilter' to: [/*]
-INFO localhost-startStop-1 org.springframework.boot.web.servlet.FilterRegistrationBean - Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
-INFO localhost-startStop-1 org.springframework.boot.web.servlet.FilterRegistrationBean - Mapping filter: 'httpPutFormContentFilter' to: [/*]
-INFO localhost-startStop-1 org.springframework.boot.web.servlet.FilterRegistrationBean - Mapping filter: 'requestContextFilter' to: [/*]
-INFO restartedMain org.springframework.web.servlet.handler.SimpleUrlHandlerMapping - Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
-INFO restartedMain org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter - Looking for @ControllerAdvice: org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@70de7195: startup date [Sat Oct 06 22:22:02 CST 2018]; root of context hierarchy
-INFO restartedMain org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping - Mapped "{[/question/delete],methods=[GET]}" onto public void com.crazyboy.mathexam.controller.QuestionController.delete(int)
-INFO restartedMain org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping - Mapped "{[/question/insert],methods=[GET]}" onto public void com.crazyboy.mathexam.controller.QuestionController.insert(java.util.Map<java.lang.String, java.lang.Object>) throws java.io.IOException
-INFO restartedMain org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping - Mapped "{[/question/uploadPic],methods=[POST]}" onto public java.lang.String com.crazyboy.mathexam.controller.QuestionController.uploadPic(org.springframework.web.multipart.MultipartFile[],java.lang.String)
-INFO restartedMain org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping - Mapped "{[/question/listQuestionByUnitId],methods=[GET]}" onto public java.util.List<com.crazyboy.mathexam.mybatis.model.Question> com.crazyboy.mathexam.controller.QuestionController.listQuestionByUnitId(int)
-INFO restartedMain org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping - Mapped "{[/unit/listAll],methods=[GET]}" onto public java.util.List<com.crazyboy.mathexam.mybatis.model.Unit> com.crazyboy.mathexam.controller.UnitController.listAll()
-INFO restartedMain org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping - Mapped "{[/unit/updateMaxScore],methods=[GET]}" onto public void com.crazyboy.mathexam.controller.UnitController.updateMaxScore(int,int)
-INFO restartedMain org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping - Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
-INFO restartedMain org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping - Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
-INFO restartedMain org.springframework.web.servlet.handler.SimpleUrlHandlerMapping - Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
-INFO restartedMain org.springframework.web.servlet.handler.SimpleUrlHandlerMapping - Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
-INFO restartedMain org.springframework.boot.devtools.autoconfigure.OptionalLiveReloadServer - LiveReload server is running on port 35729
-INFO restartedMain org.springframework.jmx.export.annotation.AnnotationMBeanExporter - Registering beans for JMX exposure on startup
-INFO restartedMain org.springframework.jmx.export.annotation.AnnotationMBeanExporter - Bean with name 'dataSource' has been autodetected for JMX exposure
-INFO restartedMain org.springframework.jmx.export.annotation.AnnotationMBeanExporter - Located MBean 'dataSource': registering with JMX server as MBean [com.alibaba.druid.pool:name=dataSource,type=DruidDataSource]
-INFO restartedMain org.springframework.boot.web.embedded.tomcat.TomcatWebServer - Tomcat started on port(s): 8003 (https) 80 (http) with context path ''
-INFO restartedMain com.crazyboy.mathexam.MathexamApplication - Started MathexamApplication in 0.779 seconds (JVM running for 19.952)
-INFO restartedMain org.springframework.boot.devtools.autoconfigure.ConditionEvaluationDeltaLoggingListener - Condition evaluation unchanged
+INFO http-nio-8003-exec-3 org.springframework.web.servlet.DispatcherServlet - FrameworkServlet 'dispatcherServlet': initialization started
+INFO http-nio-8003-exec-3 org.springframework.web.servlet.DispatcherServlet - FrameworkServlet 'dispatcherServlet': initialization completed in 2 ms
+INFO http-nio-8003-exec-3 com.alibaba.druid.pool.DruidDataSource - {dataSource-12} inited
+DEBUG http-nio-8003-exec-3 com.crazyboy.mathexam.mybatis.dao.QuestionMapper.selectOptionsByPrimaryKey - ==>  Preparing: select options from question where question_id = ? 
+DEBUG http-nio-8003-exec-3 com.crazyboy.mathexam.mybatis.dao.QuestionMapper.selectOptionsByPrimaryKey - ==> Parameters: 25(Integer)
+TRACE http-nio-8003-exec-3 com.crazyboy.mathexam.mybatis.dao.QuestionMapper.selectOptionsByPrimaryKey - <==    Columns: options
+TRACE http-nio-8003-exec-3 com.crazyboy.mathexam.mybatis.dao.QuestionMapper.selectOptionsByPrimaryKey - <==        Row: <<BLOB>>
+DEBUG http-nio-8003-exec-3 com.crazyboy.mathexam.mybatis.dao.QuestionMapper.selectOptionsByPrimaryKey - <==      Total: 1
+INFO http-nio-8003-exec-3 com.crazyboy.mathexam.service.impl.QuestionService - oldjson: {"A":"1110","B":"10","C":"12","D":"90","E":"25","F":"36"}
+INFO http-nio-8003-exec-3 com.crazyboy.mathexam.service.impl.QuestionService - key: D
+INFO http-nio-8003-exec-3 com.crazyboy.mathexam.service.impl.QuestionService - newjson: {"A":"1110","B":"10","C":"12","D":"60","E":"25","F":"36"}
+DEBUG http-nio-8003-exec-3 com.crazyboy.mathexam.mybatis.dao.QuestionMapper.modifyOptionsByPrimaryKey - ==>  Preparing: update question set options = ? where question_id = ? 
+DEBUG http-nio-8003-exec-3 com.crazyboy.mathexam.mybatis.dao.QuestionMapper.modifyOptionsByPrimaryKey - ==> Parameters: {"A":"1110","B":"10","C":"12","D":"60","E":"25","F":"36"}(String), 25(Integer)
+DEBUG http-nio-8003-exec-3 com.crazyboy.mathexam.mybatis.dao.QuestionMapper.modifyOptionsByPrimaryKey - <==    Updates: 1
+DEBUG http-nio-8003-exec-1 com.crazyboy.mathexam.mybatis.dao.QuestionMapper.modifyContentByPrimaryKey - ==>  Preparing: update question set content = ? where question_id = ? 
+DEBUG http-nio-8003-exec-1 com.crazyboy.mathexam.mybatis.dao.QuestionMapper.modifyContentByPrimaryKey - ==> Parameters: 1, 4, 9, 16, __(String), 25(Integer)
+DEBUG http-nio-8003-exec-1 com.crazyboy.mathexam.mybatis.dao.QuestionMapper.modifyContentByPrimaryKey - <==    Updates: 1

@@ -3,6 +3,7 @@ package com.crazyboy.mathexam.mybatis.dao;
 import java.util.List;
 
 import org.apache.ibatis.annotations.Mapper;
+import org.apache.ibatis.annotations.Param;
 
 import com.crazyboy.mathexam.mybatis.model.Question;
 @Mapper
@@ -48,4 +49,10 @@ public interface QuestionMapper{
     int updateByPrimaryKey(Question record);
     
     List<Question> selectByUnitId(Integer unitId);
+    
+    void modifyContentByPrimaryKey(@Param("questionId")Integer questionId, @Param("content")String content);
+    
+    void modifyOptionsByPrimaryKey(@Param("questionId") Integer questionId, @Param("options")String options);
+    
+    String selectOptionsByPrimaryKey(Integer questionId);
 }

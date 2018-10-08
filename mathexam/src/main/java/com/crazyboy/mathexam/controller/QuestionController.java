@@ -104,4 +104,14 @@ public class QuestionController {
 		redisUtil.set(timestamp, JSON.toJSONString(urlList));
 		return "ok";
 	}
+	
+	@GetMapping("modifyContentByQuestionId")
+	public void modifyContentByQuestionId(int questionId, String content) {
+		questionService.modifyContentByQuestionId(questionId, content);
+	}
+	
+	@GetMapping("modifyOptions")
+	public void modifyOptions(int questionId, int optionIndex, String content) {
+		questionService.modifyOptions(questionId, optionIndex, content);
+	}
 }

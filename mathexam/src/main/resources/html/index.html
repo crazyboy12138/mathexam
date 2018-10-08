@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>五年级数学题测试后台</title>
+	<script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
+	<script src="mathexam.js"></script>
+	<style type="text/css">
+		body{
+			background-image: url("sky.jpg");
+			background-repeat: no-repeat; 
+			background-size:100%,100%;
+		}
+		.all{
+			display: flex;
+			justify-content: center;
+			margin-top: 10%;
+		}
+		.div{
+			width: 20%;
+			height: 50px;
+			background: green;
+			border: yellow 10px solid;
+			margin: 20px;
+			font-size: 30px;
+			line-height: 50px;
+			text-align: center;
+		}
+	</style>
+</head>
+<body>
+	<div class='all'>
+		<div class='div' id='div_insert'>增加题目</div>
+		<div class='div' id='div_delete'>删除题目</div>
+		<div class='div' id='div_modify'>修改题目</div>
+	</div>
+</body>
+</html>
