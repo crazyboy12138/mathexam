@@ -8,7 +8,7 @@ import lombok.Data;
 
 /**
  * 
- * TODO <BR>
+ * redis配置
  * 
  * @author 15软件工程2班第六小组
  * @since lin.tingmin@2018年10月4日

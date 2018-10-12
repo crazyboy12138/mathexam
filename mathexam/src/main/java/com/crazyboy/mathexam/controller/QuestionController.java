@@ -29,7 +29,7 @@ import com.crazyboy.mathexam.util.RedisUtil;
 import lombok.extern.slf4j.Slf4j;
 
 /**
- * TODO <BR>
+ * question相关controller
  * 
  * @author 15软件工程2班第六小组
  * @since lin.tingmin@2018年10月3日
@@ -45,6 +45,13 @@ public class QuestionController {
 	@Autowired
 	RedisUtil redisUtil;
 	
+	/**
+	 * 添加问题
+	 * @param params
+	 * @throws IOException
+	 * @since v1.0 
+	 * @creator lin.tingmin @ 2018年10月12日
+	 */
 	@GetMapping("insert")
 	public void insert(@RequestParam() Map<String, Object> params) throws IOException {
 		Question question = new Question();
@@ -64,16 +71,38 @@ public class QuestionController {
 		questionService.insert(question);
 	}
 	
+	/**
+	 * 根据questionId删除问题
+	 * @param questionId
+	 * @since v1.0 
+	 * @creator lin.tingmin @ 2018年10月12日
+	 */
 	@GetMapping("delete")
 	public void delete(int questionId) {
 		questionService.delete(questionId);
 	}
 	
+	/**
+	 * 根据unitId，获取某一单元的所有题目
+	 * @param unitId
+	 * @return
+	 * @since v1.0 
+	 * @creator lin.tingmin @ 2018年10月12日
+	 */
 	@GetMapping("listQuestionByUnitId")
 	public List<Question> listQuestionByUnitId(int unitId){
 		return questionService.listQuestionByUnitId(unitId);
 	}
 	
+	/**
+	 * 上传图片
+	 * 后端把图片的url放进list，把list的json字符串存进redis，key为前端传来的timestamp
+	 * @param pictures
+	 * @param timestamp
+	 * @return
+	 * @since v1.0 
+	 * @creator lin.tingmin @ 2018年10月12日
+	 */
 	@PostMapping("uploadPic")
 	public String uploadPic(MultipartFile[] pictures, String timestamp){
 		log.info("timestamp: " + timestamp);
@@ -105,11 +134,26 @@ public class QuestionController {
 		return "ok";
 	}
 	
+	/**
+	 * 根据questionId修改题干
+	 * @param questionId
+	 * @param content
+	 * @since v1.0 
+	 * @creator lin.tingmin @ 2018年10月12日
+	 */
 	@GetMapping("modifyContentByQuestionId")
 	public void modifyContentByQuestionId(int questionId, String content) {
 		questionService.modifyContentByQuestionId(questionId, content);
 	}
 	
+	/**
+	 * 修改题目选项
+	 * @param questionId
+	 * @param optionIndex
+	 * @param content
+	 * @since v1.0 
+	 * @creator lin.tingmin @ 2018年10月12日
+	 */
 	@GetMapping("modifyOptions")
 	public void modifyOptions(int questionId, int optionIndex, String content) {
 		questionService.modifyOptions(questionId, optionIndex, content);
